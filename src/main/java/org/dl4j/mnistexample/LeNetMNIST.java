@@ -14,7 +14,7 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  ******************************************************************************/
-package org.deeplearning4j.examples.sample;
+package org.dl4j.mnistexample;
 
 import org.apache.commons.io.FilenameUtils;
 import org.deeplearning4j.datasets.iterator.impl.MnistDataSetIterator;
