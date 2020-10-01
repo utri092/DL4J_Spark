@@ -17,15 +17,15 @@ import org.nd4j.linalg.dataset.DataSet;
 
 import java.util.List;
 
-
-public class Inference {
+public class BasicTrain {
 
     public static void main(String[] args) throws Exception {
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JInference");
+        conf.setAppName("DL4JTrain");
         conf.setMaster("local[*]");
-        
+
+
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         MultiLayerNetwork model = KerasModelImport.importKerasSequentialModelAndWeights("./src/main/resources/model/model.h5", true);
@@ -41,24 +41,30 @@ public class Inference {
         // very basic need to explore further
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
 
-        SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc,model,tm);
+        SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, model, tm);
 
-        int batchsize =32;
+        int batchsize = 32; // Not used yet
         int numEpochs = 10;
+
 
         // Collect RDD for printing. Cant print other rdds
 
-       /* for(List<Writable> line:rddWritables.collect()){
-            System.out.println("* "+line);
+        /*for(String line: rddString.collect()){
+            System.out.println("* " + line);
         }*/
 
-        //TODO: Distributed Inference
-        //sparkNet.feedForwardWithKey();
-        //TODO: Alternate Method that accepts Matrix or Vector
-        //sparkNet.predict();
+        System.out.println("Before Train!");
+
+        for (int i = 0; i < numEpochs; i++) {
+            /*@note: For Hadoop HDFS direct pass should be possible from docs*/
+            //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
+            sparkNet.fit(trainingData);
+        }
 
         System.out.println("DONE");
 
+
     }
+
 
 }
