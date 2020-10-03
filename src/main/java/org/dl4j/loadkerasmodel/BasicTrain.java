@@ -46,6 +46,11 @@ public class BasicTrain {
         int firstColumnLabel = 2;   // No of feature columns from the start to end of row
         int lastColumnLabel = 1;    // No of labels after the last feature column
         JavaRDD<DataSet> trainingData = rddWritables.map(new DataVecDataSetFunction(firstColumnLabel, lastColumnLabel, true, null, null));
+
+        /*for(DataSet line: trainingData.collect()){
+            System.out.println("* " + line.getFeatures());
+        }*/
+
         // very basic need to explore further
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
 

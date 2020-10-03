@@ -22,12 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/datasets/predictions_small.csv" afterDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_small.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_small.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/datasets/predictions_small.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasets/predictions_small.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -172,6 +171,14 @@
       <workItem from="1601504434578" duration="8658000" />
       <workItem from="1601543595021" duration="6529000" />
     </task>
+    <task id="LOCAL-00001" summary="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet">
+      <created>1601686408126</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601686408126</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +200,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -216,10 +225,11 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="725" y="430" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601438276421" />
-    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1601544458019">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl" timestamp="1601696092719">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601544458019" />
+    <state x="761" y="322" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1601696092719" />
     <state x="773" y="512" key="Github.ShareDialog" timestamp="1601437771713">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -228,54 +238,54 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="293" key="GridCell.Tab.0.bottom" timestamp="1601686283837">
+    <state width="1807" height="177" key="GridCell.Tab.0.bottom" timestamp="1601697230975">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="293" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283836" />
-    <state width="1807" height="293" key="GridCell.Tab.0.center" timestamp="1601686283834">
+    <state width="1807" height="177" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
+    <state width="1807" height="177" key="GridCell.Tab.0.center" timestamp="1601697230975">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="293" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283834" />
-    <state width="1807" height="293" key="GridCell.Tab.0.left" timestamp="1601686283833">
+    <state width="1807" height="177" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
+    <state width="1807" height="177" key="GridCell.Tab.0.left" timestamp="1601697230975">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="293" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283833" />
-    <state width="1807" height="293" key="GridCell.Tab.0.right" timestamp="1601686283836">
+    <state width="1807" height="177" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
+    <state width="1807" height="177" key="GridCell.Tab.0.right" timestamp="1601697230975">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="293" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283836" />
-    <state width="1807" height="293" key="GridCell.Tab.1.bottom" timestamp="1601686279830">
+    <state width="1807" height="177" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
+    <state width="1807" height="68" key="GridCell.Tab.1.bottom" timestamp="1601695387558">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="293" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279830" />
-    <state width="1807" height="293" key="GridCell.Tab.1.center" timestamp="1601686279830">
+    <state width="1807" height="68" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387558" />
+    <state width="1807" height="68" key="GridCell.Tab.1.center" timestamp="1601695387556">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="293" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279830" />
-    <state width="1807" height="293" key="GridCell.Tab.1.left" timestamp="1601686279829">
+    <state width="1807" height="68" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387556" />
+    <state width="1807" height="68" key="GridCell.Tab.1.left" timestamp="1601695387556">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="293" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279829" />
-    <state width="1807" height="293" key="GridCell.Tab.1.right" timestamp="1601686279830">
+    <state width="1807" height="68" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387556" />
+    <state width="1807" height="68" key="GridCell.Tab.1.right" timestamp="1601695387557">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="293" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279830" />
+    <state width="1807" height="68" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387557" />
     <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -285,27 +295,30 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1601437831693">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601686410638">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1601437831693" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1601686410638" />
+    <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601692672447">
+      <screen x="67" y="27" width="1853" height="1173" />
+    </state>
+    <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1173@67.27.1853.1173" timestamp="1601692672447" />
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1601690612621">
+      <screen x="67" y="27" width="1853" height="1173" />
+    </state>
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1601690612621" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java</url>
-          <line>68</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="org.deeplearning4j.exception.DL4JInvalidInputException" package="org.deeplearning4j.exception" />
+          <option name="timeStamp" value="25" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="28" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
