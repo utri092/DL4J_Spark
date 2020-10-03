@@ -23,63 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_small.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_core_1_11_109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_emr_1_11_109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kms_1_11_109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_s3_1_11_109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_jmespath_java_1_11_109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_6_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jamesmurty_utils_java_xmlbuilder_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_17_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_42_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jets3t_jets3t_0_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_6_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_7_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_1_0_incubating.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_core_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_core_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_kvstore_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_kvstore_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_launcher_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_launcher_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_network_common_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_network_common_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_network_shuffle_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_network_shuffle_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_tags_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_tags_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_unsafe_2_11_2_4_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_unsafe_2_11_2_4_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_windows_x86_64_0_3_9_1_5_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_windows_x86_64_0_3_9_1_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_1_5_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_10_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_sslengine_6_1_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_windows_x86_64_1_0_0_beta7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_linux_x86_64_1_0_0_beta7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__software_amazon_ion_ion_java_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/datasets/predictions_small.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_converted.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_converted.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/datasets/predictions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasets/predictions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_small.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_small.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +93,18 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BasicTrain">
+  <component name="RunManager" selected="Application.Inference">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BasicTrain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dl4j.loadkerasmodel.BasicTrain" />
       <module name="deeplearning4j-example-sample" />
@@ -186,17 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.LeNetMNIST" />
       <item itemvalue="Application.Inference" />
@@ -204,8 +152,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BasicTrain" />
         <item itemvalue="Application.Inference" />
+        <item itemvalue="Application.BasicTrain" />
         <item itemvalue="Application.LeNetMNIST" />
       </list>
     </recent_temporary>
@@ -280,54 +228,54 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1874" height="453" key="GridCell.Tab.0.bottom" timestamp="1601550125447">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.0.bottom" timestamp="1601686283837">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="318" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601438424059" />
-    <state width="1874" height="453" key="GridCell.Tab.0.center" timestamp="1601550125447">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283836" />
+    <state width="1807" height="293" key="GridCell.Tab.0.center" timestamp="1601686283834">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="318" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601438424058" />
-    <state width="1874" height="453" key="GridCell.Tab.0.left" timestamp="1601550125447">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283834" />
+    <state width="1807" height="293" key="GridCell.Tab.0.left" timestamp="1601686283833">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="318" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601438424057" />
-    <state width="1874" height="453" key="GridCell.Tab.0.right" timestamp="1601550125447">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283833" />
+    <state width="1807" height="293" key="GridCell.Tab.0.right" timestamp="1601686283836">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="318" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601438424058" />
-    <state width="1874" height="197" key="GridCell.Tab.1.bottom" timestamp="1601550076983">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601686283836" />
+    <state width="1807" height="293" key="GridCell.Tab.1.bottom" timestamp="1601686279830">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="392" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601437884332" />
-    <state width="1874" height="197" key="GridCell.Tab.1.center" timestamp="1601550076983">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279830" />
+    <state width="1807" height="293" key="GridCell.Tab.1.center" timestamp="1601686279830">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="392" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601437884332" />
-    <state width="1874" height="197" key="GridCell.Tab.1.left" timestamp="1601550076983">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279830" />
+    <state width="1807" height="293" key="GridCell.Tab.1.left" timestamp="1601686279829">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="392" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601437884332" />
-    <state width="1874" height="197" key="GridCell.Tab.1.right" timestamp="1601550076983">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1807" height="293" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279829" />
+    <state width="1807" height="293" key="GridCell.Tab.1.right" timestamp="1601686279830">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="392" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601437884332" />
+    <state width="1807" height="293" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601686279830" />
     <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -341,5 +289,24 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1601437831693" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java</url>
+          <line>68</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

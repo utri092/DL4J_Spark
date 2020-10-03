@@ -14,7 +14,6 @@ import org.deeplearning4j.spark.datavec.DataVecDataSetFunction;
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer;
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
 import org.nd4j.linalg.dataset.DataSet;
-
 import java.util.List;
 
 public class BasicTrain {
@@ -35,8 +34,17 @@ public class BasicTrain {
         RecordReader recordReader = new CSVRecordReader(0, ',');
         JavaRDD<List<Writable>> rddWritables = rddString.map(new StringToWritablesFunction(recordReader));
 
-        int firstColumnLabel = 2;   // No of features from the start to end of row
-        int lastColumnLabel = 1;    // Last column
+
+        /*for(String line: rddString.collect()){
+            System.out.println("* " + line);
+        }*/
+
+        /*for(List line: rddWritables.collect()){
+            System.out.println("* " + line.get(0));
+        }*/
+
+        int firstColumnLabel = 2;   // No of feature columns from the start to end of row
+        int lastColumnLabel = 1;    // No of labels after the last feature column
         JavaRDD<DataSet> trainingData = rddWritables.map(new DataVecDataSetFunction(firstColumnLabel, lastColumnLabel, true, null, null));
         // very basic need to explore further
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
@@ -47,21 +55,18 @@ public class BasicTrain {
         int numEpochs = 10;
 
 
-        // Collect RDD for printing. Cant print other rdds
-
-        /*for(String line: rddString.collect()){
-            System.out.println("* " + line);
-        }*/
-
         System.out.println("Before Train!");
 
         for (int i = 0; i < numEpochs; i++) {
-            /*@note: For Hadoop HDFS direct pass should be possible from docs*/
+            // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
             //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
             sparkNet.fit(trainingData);
         }
 
-        System.out.println("DONE");
+        System.out.println("DONE TRAINING");
+
+
+
 
 
     }
