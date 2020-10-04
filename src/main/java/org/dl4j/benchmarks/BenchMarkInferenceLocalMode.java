@@ -1,11 +1,9 @@
-package org.dl4j.loadkerasmodel;
+package org.dl4j.benchmarks;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.mllib.linalg.Matrix;
-import org.apache.spark.sql.Dataset;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.writable.Writable;
@@ -18,21 +16,16 @@ import org.deeplearning4j.spark.api.TrainingMaster;
 import org.deeplearning4j.spark.datavec.DataVecDataSetFunction;
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer;
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
-import org.deeplearning4j.spark.util.MLLibUtil;
-import org.deeplearning4j.spark.util.SparkUtils;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import scala.Tuple2;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Vector;
 
 
-public class Inference {
+public class BenchMarkInferenceLocalMode {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
@@ -89,42 +82,36 @@ public class Inference {
 
         JavaPairRDD<String, INDArray> predictions = sparkNet.feedForwardWithKey(testPairs,5);
 
-
-        predictions.collect().forEach(p->{
-            System.out.println(p._1 + ": " + p._2);
-        });
-
         return predictions;
     }
 
     public static void main(String[] args) throws Exception {
 
+
+        int iterations = 1000;
+
         JavaSparkContext sc = startSparkSession();
 
-//        String modelPath = "hdfs://192.168.137.224:9000/part4-projects/model/model.h5";
-
-        String localModelPath = "./src/main/resources/model/model.h5";
+        String localModelPath = "./src/main/resources/benchmarks/model.h5";
+        String datafilePath = "./src/main/resources/benchmarks/dataset-1_converted.csv";
 
         SparkDl4jMultiLayer sparkNet = createModel(sc, localModelPath);
 
-        sparkNet.getNetwork().save(new File("./src/main/resources/model/model.bin"));
+        JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 
-        String datafilePath = "hdfs://192.168.137.224:9000/part4-projects/datasets/predictions_small.csv";
+        System.out.println("Before Inferencing!");
 
-        // The class loader that loaded the class
-        /*
-        @Bug Will not work if dir already exists. Throws exception which is not handled by spark
-        ClassLoader classLoader = Inference.class.getClassLoader();
-        String datafilePath = "datasets/predictions_small.csv";
-        InputStream inputStream = classLoader.getResourceAsStream(datafilePath);
-        System.out.println(inputStream.toString());*/
+        long startTime = System.nanoTime();
 
-//       JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
+        for(int i = 0 ; i < iterations; i++){
+           JavaPairRDD<String, INDArray> predictions = makePredictions(testData, sparkNet);
+        }
 
-//       JavaPairRDD<String, INDArray> predictions = makePredictions(testData, sparkNet);
+        long endTime = System.nanoTime();
 
-//        predictions.saveAsTextFile("./src/main/resources/inferences/");
-        System.out.println("DONE");
+        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
+        System.out.println(duration/1000000000);
+        System.out.println("DONE Inferencing");
 
     }
 

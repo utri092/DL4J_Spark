@@ -51,16 +51,22 @@ public class BasicTrain {
             System.out.println("* " + line.getFeatures());
         }*/
 
+
+        int batchsize = 2048; // Not used yet
+        int numEpochs = 50;
+
         // very basic need to explore further
-        TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
+        TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1)
+                .batchSizePerWorker(batchsize)
+                .build();
+
 
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, model, tm);
 
-        int batchsize = 32; // Not used yet
-        int numEpochs = 10;
 
 
         System.out.println("Before Train!");
+
 
         for (int i = 0; i < numEpochs; i++) {
             // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs

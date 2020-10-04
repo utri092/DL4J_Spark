@@ -150,11 +150,11 @@
             <version>${dl4j-master.version}</version>
         </dependency>
         <!-- Used for patent classification example -->
- <!--       <dependency>
+        <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-azure</artifactId>
             <version>${azure.hadoop.version}</version>
-        </dependency>-->
+        </dependency>
         <!-- Used for patent classification example -->
 <!--        <dependency>
             <groupId>com.microsoft.azure</groupId>

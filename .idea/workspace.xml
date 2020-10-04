@@ -22,11 +22,46 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Distributed Inference method works&#10;Code Clean up&#10;TODO: Test on Rpi">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jamesmurty_utils_java_xmlbuilder_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jets3t_jets3t_0_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_1_0_incubating.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_sslengine_6_1_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/CreatePartitionsFromDataset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-2_converted.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-3_converted.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/model.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/model.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/results.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/datasets/dataset-1_dl4j_feature_extraction.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/model/model.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_6_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_7_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_7_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_7_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/datasets/predictions_small.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasets/predictions_small.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +103,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -76,23 +111,28 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.dl4j.benchmarks" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/datasets" />
       <recent name="$PROJECT_DIR$/src/main/resources/model" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/model" />
-    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean compile" />
       <command value="mvn clean" />
+      <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Inference">
+  <component name="RunManager" selected="Application.BenchMarkTrainLocalMode">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -110,6 +150,32 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.dl4j.loadkerasmodel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkInferenceLocalMode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalMode" />
+      <module name="deeplearning4j-example-sample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dl4j.benchmarks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkTrainLocalMode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkTrainLocalMode" />
+      <module name="deeplearning4j-example-sample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dl4j.benchmarks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,11 +214,15 @@
       <item itemvalue="Application.LeNetMNIST" />
       <item itemvalue="Application.Inference" />
       <item itemvalue="Application.BasicTrain" />
+      <item itemvalue="Application.BenchMarkTrainLocalMode" />
+      <item itemvalue="Application.BenchMarkInferenceLocalMode" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Inference" />
+        <item itemvalue="Application.BenchMarkTrainLocalMode" />
+        <item itemvalue="Application.BenchMarkInferenceLocalMode" />
         <item itemvalue="Application.BasicTrain" />
+        <item itemvalue="Application.Inference" />
         <item itemvalue="Application.LeNetMNIST" />
       </list>
     </recent_temporary>
@@ -178,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601686408126</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Distributed Inference method works&#10;Code Clean up&#10;TODO: Test on Rpi">
+      <created>1601697276338</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601697276338</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +278,8 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet" />
+    <MESSAGE value="Distributed Inference method works&#10;Code Clean up&#10;TODO: Test on Rpi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Distributed Inference method works&#10;Code Clean up&#10;TODO: Test on Rpi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -238,54 +316,54 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="177" key="GridCell.Tab.0.bottom" timestamp="1601697230975">
+    <state width="1807" height="340" key="GridCell.Tab.0.bottom" timestamp="1601784058719">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="177" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
-    <state width="1807" height="177" key="GridCell.Tab.0.center" timestamp="1601697230975">
+    <state width="1807" height="340" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601784058719" />
+    <state width="1807" height="340" key="GridCell.Tab.0.center" timestamp="1601784058719">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="177" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
-    <state width="1807" height="177" key="GridCell.Tab.0.left" timestamp="1601697230975">
+    <state width="1807" height="340" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601784058719" />
+    <state width="1807" height="340" key="GridCell.Tab.0.left" timestamp="1601784058719">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="177" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
-    <state width="1807" height="177" key="GridCell.Tab.0.right" timestamp="1601697230975">
+    <state width="1807" height="340" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601784058719" />
+    <state width="1807" height="340" key="GridCell.Tab.0.right" timestamp="1601784058719">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="177" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601697230975" />
-    <state width="1807" height="68" key="GridCell.Tab.1.bottom" timestamp="1601695387558">
+    <state width="1807" height="340" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601784058719" />
+    <state width="1807" height="284" key="GridCell.Tab.1.bottom" timestamp="1601779062307">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="68" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387558" />
-    <state width="1807" height="68" key="GridCell.Tab.1.center" timestamp="1601695387556">
+    <state width="1807" height="284" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601779062307" />
+    <state width="1807" height="284" key="GridCell.Tab.1.center" timestamp="1601779062307">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="68" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387556" />
-    <state width="1807" height="68" key="GridCell.Tab.1.left" timestamp="1601695387556">
+    <state width="1807" height="284" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601779062307" />
+    <state width="1807" height="284" key="GridCell.Tab.1.left" timestamp="1601779062307">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="68" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387556" />
-    <state width="1807" height="68" key="GridCell.Tab.1.right" timestamp="1601695387557">
+    <state width="1807" height="284" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601779062307" />
+    <state width="1807" height="284" key="GridCell.Tab.1.right" timestamp="1601779062307">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="68" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601695387557" />
+    <state width="1807" height="284" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601779062307" />
     <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -295,18 +373,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601686410638">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601697277709">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1601686410638" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1601697277709" />
     <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601692672447">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1173@67.27.1853.1173" timestamp="1601692672447" />
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1601690612621">
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1601698319409">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1601690612621" />
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1601698319409" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
