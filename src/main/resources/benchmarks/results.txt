@@ -25,3 +25,8 @@ Time Taken = 75 s
 Trial 1: Time Taken = 551 s, about 9 minutes
 
 Trial 2: Time Taken = 546 s, about 9 minutes
+
+# Local Inference Benchmarks
+
+## dataset-1_converted.csv
+Time taken = 3-4 seconds
