@@ -22,9 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="MAde Bechmark classes for training and inferencing&#10;Add results.txt&#10;TODO: Test on Rpi&#10;TODO: Preprocess batches in benchmarks">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="benchmarks made and testing done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/CreatePartitionsFromDataset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/CreatePartitionsFromDataset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,11 +174,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BasicTrain" />
-      <item itemvalue="Application.BenchMarkInferenceLocalMode" />
-      <item itemvalue="Application.BenchMarkTrainLocalMode" />
-      <item itemvalue="Application.Inference" />
       <item itemvalue="Application.LeNetMNIST" />
+      <item itemvalue="Application.Inference" />
+      <item itemvalue="Application.BasicTrain" />
+      <item itemvalue="Application.BenchMarkTrainLocalMode" />
+      <item itemvalue="Application.BenchMarkInferenceLocalMode" />
     </list>
     <recent_temporary>
       <list>
@@ -225,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601785650792</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="benchmarks made and testing done">
+      <created>1601872664392</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601872664392</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +257,8 @@
     <MESSAGE value="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet" />
     <MESSAGE value="Distributed Inference method works&#10;Code Clean up&#10;TODO: Test on Rpi" />
     <MESSAGE value="MAde Bechmark classes for training and inferencing&#10;Add results.txt&#10;TODO: Test on Rpi&#10;TODO: Preprocess batches in benchmarks" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAde Bechmark classes for training and inferencing&#10;Add results.txt&#10;TODO: Test on Rpi&#10;TODO: Preprocess batches in benchmarks" />
+    <MESSAGE value="benchmarks made and testing done" />
+    <option name="LAST_COMMIT_MESSAGE" value="benchmarks made and testing done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
