@@ -17,6 +17,5 @@ public class CreatePartitionsFromDataset {
         String filePath = "./src/main/resources/benchmarks/dataset-1_converted.csv";
         JavaRDD<String> rddstring = sc.textFile(filePath);
 
-
     }
 }
