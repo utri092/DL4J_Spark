@@ -16,12 +16,13 @@ import org.deeplearning4j.spark.api.TrainingMaster;
 import org.deeplearning4j.spark.datavec.DataVecDataSetFunction;
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer;
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
+import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import scala.Tuple2;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Path;
 import java.util.List;
 
 
@@ -53,6 +54,34 @@ public class BenchMarkInferenceLocalMode {
 //        System.out.println(model.getLayerWiseConfigurations());
 
         return new SparkDl4jMultiLayer(sc, model, tm);
+
+    }
+
+    public static SparkDl4jMultiLayer createModelFromBin(JavaSparkContext sc, String modelPath){
+        MultiLayerNetwork model = null;
+        MultiLayerNetwork net = null;
+        
+        try {
+
+            File file = new File(modelPath);
+
+            InputStream targetStream = new FileInputStream(file);
+            
+            try(BufferedInputStream is = new BufferedInputStream(targetStream)){
+                net = ModelSerializer.restoreMultiLayerNetwork(is);
+            }
+            
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
+
+        SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
+
+        return sparkNet;
 
     }
 
@@ -92,10 +121,14 @@ public class BenchMarkInferenceLocalMode {
 
         JavaSparkContext sc = startSparkSession();
 
-        String localModelPath = "./src/main/resources/benchmarks/model.h5";
-        String datafilePath = "./src/main/resources/benchmarks/dataset-1_converted.csv";
+        String localModelPath = "./src/main/resources/benchmarks/model.bin";
 
-        SparkDl4jMultiLayer sparkNet = createModel(sc, localModelPath);
+
+//        SparkDl4jMultiLayer sparkNet = createModel(sc, localModelPath);
+
+        SparkDl4jMultiLayer sparkNet = createModelFromBin(sc, localModelPath);
+
+        String datafilePath = "./src/main/resources/benchmarks/dataset-1_converted.csv";
 
         JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 
