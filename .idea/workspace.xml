@@ -29,9 +29,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="benchmarks made and testing done">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="fixed some code to make local mode work">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +109,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BenchMarkTrainLocalMode">
+  <component name="RunManager" selected="Application.BenchMarkInferenceLocalMode">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -135,6 +136,19 @@
     </configuration>
     <configuration name="BenchMarkInferenceLocalMode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalMode" />
+      <module name="deeplearning4j-example-sample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dl4j.benchmarks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkInferenceLocalModeHDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS" />
       <module name="deeplearning4j-example-sample" />
       <extension name="coverage">
         <pattern>
@@ -173,33 +187,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeNetMNIST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.mnistexample.LeNetMNIST" />
-      <module name="deeplearning4j-example-sample" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.deeplearning4j.examples.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.LeNetMNIST" />
       <item itemvalue="Application.Inference" />
       <item itemvalue="Application.BasicTrain" />
       <item itemvalue="Application.BenchMarkTrainLocalMode" />
       <item itemvalue="Application.BenchMarkInferenceLocalMode" />
+      <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BenchMarkTrainLocalMode" />
         <item itemvalue="Application.BenchMarkInferenceLocalMode" />
+        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
+        <item itemvalue="Application.BenchMarkTrainLocalMode" />
         <item itemvalue="Application.BasicTrain" />
         <item itemvalue="Application.Inference" />
-        <item itemvalue="Application.LeNetMNIST" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601872664392</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed some code to make local mode work">
+      <created>1601964758686</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601964758686</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +291,8 @@
     <MESSAGE value="Distributed Inference method works&#10;Code Clean up&#10;TODO: Test on Rpi" />
     <MESSAGE value="MAde Bechmark classes for training and inferencing&#10;Add results.txt&#10;TODO: Test on Rpi&#10;TODO: Preprocess batches in benchmarks" />
     <MESSAGE value="benchmarks made and testing done" />
-    <option name="LAST_COMMIT_MESSAGE" value="benchmarks made and testing done" />
+    <MESSAGE value="fixed some code to make local mode work" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some code to make local mode work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -320,54 +329,54 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="336" key="GridCell.Tab.0.bottom" timestamp="1601964587350">
+    <state width="1807" height="132" key="GridCell.Tab.0.bottom" timestamp="1601968861465">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="336" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601964587350" />
-    <state width="1807" height="336" key="GridCell.Tab.0.center" timestamp="1601964587350">
+    <state width="1807" height="132" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601968861465" />
+    <state width="1807" height="132" key="GridCell.Tab.0.center" timestamp="1601968861464">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="336" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601964587350" />
-    <state width="1807" height="336" key="GridCell.Tab.0.left" timestamp="1601964587349">
+    <state width="1807" height="132" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601968861464" />
+    <state width="1807" height="132" key="GridCell.Tab.0.left" timestamp="1601968861464">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="336" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601964587349" />
-    <state width="1807" height="336" key="GridCell.Tab.0.right" timestamp="1601964587350">
+    <state width="1807" height="132" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601968861464" />
+    <state width="1807" height="132" key="GridCell.Tab.0.right" timestamp="1601968861464">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="336" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601964587350" />
-    <state width="1807" height="284" key="GridCell.Tab.1.bottom" timestamp="1601786038980">
+    <state width="1807" height="132" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601968861464" />
+    <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1601968385615">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="284" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601786038980" />
-    <state width="1807" height="284" key="GridCell.Tab.1.center" timestamp="1601786038979">
+    <state width="1807" height="447" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385615" />
+    <state width="1807" height="447" key="GridCell.Tab.1.center" timestamp="1601968385615">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="284" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601786038979" />
-    <state width="1807" height="284" key="GridCell.Tab.1.left" timestamp="1601786038979">
+    <state width="1807" height="447" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385615" />
+    <state width="1807" height="447" key="GridCell.Tab.1.left" timestamp="1601968385614">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="284" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601786038979" />
-    <state width="1807" height="284" key="GridCell.Tab.1.right" timestamp="1601786038979">
+    <state width="1807" height="447" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385614" />
+    <state width="1807" height="447" key="GridCell.Tab.1.right" timestamp="1601968385615">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="284" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601786038979" />
+    <state width="1807" height="447" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385615" />
     <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -381,10 +390,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601785652433">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601964761050">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1601785652433" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1601964761050" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601964488206">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>

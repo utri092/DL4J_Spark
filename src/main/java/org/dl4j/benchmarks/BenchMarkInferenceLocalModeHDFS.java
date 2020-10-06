@@ -4,7 +4,6 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.input.PortableDataStream;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.writable.Writable;
@@ -20,16 +19,20 @@ import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
+
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.conf.Configuration;
+
 import scala.Tuple2;
 
 import java.io.*;
-import java.nio.file.Path;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceLocalMode {
-
-    private static Object PortableDataStream;
+public class BenchMarkInferenceLocalModeHDFS {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
@@ -39,50 +42,23 @@ public class BenchMarkInferenceLocalMode {
         return new JavaSparkContext(conf);
     }
 
-    public static SparkDl4jMultiLayer createModel(JavaSparkContext sc, String modelPath){
-        MultiLayerNetwork model = null;
-        try {
-            model = KerasModelImport.importKerasSequentialModelAndWeights(modelPath, true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InvalidKerasConfigurationException e) {
-            e.printStackTrace();
-        } catch (UnsupportedKerasConfigurationException e) {
-            e.printStackTrace();
-        }
+    public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
+        //@detail Takes in HDFS string path and tries to get model.bin
 
-        TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
-
-//        System.out.println(model.getLayers());
-//        System.out.println(model.getLayerWiseConfigurations());
-
-        return new SparkDl4jMultiLayer(sc, model, tm);
-
-    }
-
-    public static SparkDl4jMultiLayer createModelFromBin(JavaSparkContext sc, String modelPath){
         MultiLayerNetwork model = null;
         MultiLayerNetwork net = null;
-        
-        try {
 
-            File file = new File(modelPath);
+        FileSystem fileSystem = FileSystem.get(new URI ("hdfs://afog-master:9000"), sc.hadoopConfiguration());
 
-            InputStream targetStream = new FileInputStream(file);
-            
-            try(BufferedInputStream is = new BufferedInputStream(targetStream)){
-                net = ModelSerializer.restoreMultiLayerNetwork(is);
-            }
-            
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        try(BufferedInputStream is = new BufferedInputStream(fileSystem.open(new Path(modelPath)))){
+            net = ModelSerializer.restoreMultiLayerNetwork(is);
         }
-
 
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
 
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
+
+
 
         return sparkNet;
 
@@ -98,14 +74,14 @@ public class BenchMarkInferenceLocalMode {
         int lastColumnLabel = 1;    // No of labels after the last feature column
         JavaRDD<DataSet> testData = rddWritables.map(new DataVecDataSetFunction(firstColumnLabel, lastColumnLabel, true, null, null));
 
-        for (DataSet dataSet : testData.collect()) {
+       /* for (DataSet dataSet : testData.collect()) {
             System.out.println(dataSet.getFeatures());
-        }
+        }*/
 
         return testData;
     }
 
-    public static JavaPairRDD<String, INDArray> makePredictions(JavaPairRDD<String, INDArray> testPairs, SparkDl4jMultiLayer sparkNet){
+    public static JavaPairRDD<String, INDArray> makePredictions( JavaPairRDD<String, INDArray> testPairs, SparkDl4jMultiLayer sparkNet){
         // @detail Tuple2: Scala class expects two arguments. Tuple3 and Tuple4 are alternatives
         // @arg-1: Name of label/s
         // @arg-2: INDArray of features from JavaRDD<Dataset>
@@ -117,17 +93,17 @@ public class BenchMarkInferenceLocalMode {
 
     public static void main(String[] args) throws Exception {
 
+
         int iterations = 1000;
 
         JavaSparkContext sc = startSparkSession();
 
-        String localModelPath = "./src/main/resources/benchmarks/model.bin";
 
-//        SparkDl4jMultiLayer sparkNet = createModel(sc, localModelPath);
+        String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
-        SparkDl4jMultiLayer sparkNet = createModelFromBin(sc, localModelPath);
+        SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String datafilePath = "./src/main/resources/benchmarks/dataset-1_converted.csv";
+        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv";
 
         JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 
@@ -138,7 +114,7 @@ public class BenchMarkInferenceLocalMode {
         JavaPairRDD<String, INDArray> testPairs = testData.mapToPair(f-> new Tuple2("carparkOccupancy", f.getFeatures()));
 
         for(int i = 0 ; i < iterations; i++){
-           JavaPairRDD<String, INDArray> predictions = makePredictions(testPairs, sparkNet);
+            JavaPairRDD<String, INDArray> predictions = makePredictions(testPairs, sparkNet);
         }
 
         long endTime = System.nanoTime();
@@ -146,6 +122,8 @@ public class BenchMarkInferenceLocalMode {
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
         System.out.println(duration/1000000000);
         System.out.println("DONE Inferencing");
+
+        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
 
     }
 
