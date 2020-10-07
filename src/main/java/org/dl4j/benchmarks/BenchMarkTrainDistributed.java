@@ -1,28 +1,52 @@
 package org.dl4j.benchmarks;
 
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.launcher.SparkLauncher;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.writable.Writable;
 import org.datavec.spark.transform.misc.StringToWritablesFunction;
 import org.deeplearning4j.nn.modelimport.keras.KerasModelImport;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
-import org.deeplearning4j.optimize.solvers.accumulation.encoding.threshold.AdaptiveThresholdAlgorithm;
 import org.deeplearning4j.spark.api.TrainingMaster;
 import org.deeplearning4j.spark.datavec.DataVecDataSetFunction;
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer;
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
-import org.deeplearning4j.spark.parameterserver.training.SharedTrainingMaster;
+import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.parameterserver.distributed.conf.VoidConfiguration;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
-public class BenchMarkTrainLocalMode {
 
+public class BenchMarkTrainDistributed {
+    public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
+        //@detail Takes in HDFS string path and tries to get model.bin
+
+        MultiLayerNetwork model = null;
+        MultiLayerNetwork net = null;
+
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://afog-master:9000"), sc.hadoopConfiguration());
+
+        try(BufferedInputStream is = new BufferedInputStream(fileSystem.open(new Path(modelPath)))){
+            net = ModelSerializer.restoreMultiLayerNetwork(is);
+        }
+
+        TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
+
+        SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
+
+
+
+        return sparkNet;
+
+    }
     public static void main(String[] args) throws Exception {
         int warmup = 5;
         int iterations = 100;
@@ -32,9 +56,9 @@ public class BenchMarkTrainLocalMode {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainLocalMode");
-        conf.setMaster("local[4]");
-        /*conf.setMaster("spark://192.168.137.224:7077")*/;
+        conf.setAppName("BenchMarkTrainDistributed");
+        //conf.setMaster("local[4]");
+        conf.setMaster("spark://192.168.137.224:7077");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 
@@ -64,9 +88,12 @@ public class BenchMarkTrainLocalMode {
                 .workersPerNode(1)          // Workers per node
                 .build();*/
 
-        MultiLayerNetwork model = KerasModelImport.importKerasSequentialModelAndWeights("./src/main/resources/benchmarks/model.h5");
+        String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
-        String filePath = "./src/main/resources/benchmarks/dataset-1_converted.csv";
+        SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
+
+        String filePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv";
+        //"hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv"
         JavaRDD<String> rddString = sc.textFile(filePath);
         RecordReader recordReader = new CSVRecordReader(0, ',');
         JavaRDD<List<Writable>> rddWritables = rddString.map(new StringToWritablesFunction(recordReader));
@@ -81,7 +108,7 @@ public class BenchMarkTrainLocalMode {
                 .build();
 
 
-        SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, model, tm);
+
 
 //        System.out.println(model.getLayers());
 //        System.out.println(model.getLayerWiseConfigurations());
@@ -114,5 +141,4 @@ public class BenchMarkTrainLocalMode {
 
 
     }
-
 }
