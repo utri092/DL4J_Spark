@@ -111,11 +111,11 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-crypto:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.spark-project.spark:unused:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.nd4j:nd4j-native:1.0.0-beta7" level="project" />
-    <orderEntry type="library" name="Maven: org.nd4j:nd4j-native:windows-x86_64:1.0.0-beta7" level="project" />
+    <orderEntry type="library" name="Maven: org.nd4j:nd4j-native:linux-x86_64:1.0.0-beta7" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:javacpp:1.5.3" level="project" />
-    <orderEntry type="library" name="Maven: org.bytedeco:javacpp:windows-x86_64:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.bytedeco:javacpp:linux-x86_64:1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:0.3.9-1-1.5.3" level="project" />
-    <orderEntry type="library" name="Maven: org.bytedeco:openblas:windows-x86_64:0.3.9-1-1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.bytedeco:openblas:linux-x86_64:0.3.9-1-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.nd4j:nd4j-native-api:1.0.0-beta7" level="project" />
     <orderEntry type="library" name="Maven: org.nd4j:nd4j-api:1.0.0-beta7" level="project" />
     <orderEntry type="library" name="Maven: com.jakewharton.byteunits:byteunits:0.9.1" level="project" />
@@ -157,9 +157,9 @@
     <orderEntry type="library" name="Maven: org.bytedeco:javacpp:linux-arm64:1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:javacpp:linux-ppc64le:1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:javacpp:linux-x86:1.5.3" level="project" />
-    <orderEntry type="library" name="Maven: org.bytedeco:javacpp:linux-x86_64:1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:javacpp:macosx-x86_64:1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:javacpp:windows-x86:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.bytedeco:javacpp:windows-x86_64:1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:hdf5:1.12.0-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:hdf5:linux-x86:1.12.0-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:hdf5:linux-x86_64:1.12.0-1.5.3" level="project" />
@@ -203,12 +203,12 @@
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:ios-arm64:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:ios-x86_64:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:linux-x86:0.3.9-1.5.3" level="project" />
-    <orderEntry type="library" name="Maven: org.bytedeco:openblas:linux-x86_64:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:linux-armhf:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:linux-arm64:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:linux-ppc64le:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:macosx-x86_64:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:windows-x86:0.3.9-1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.bytedeco:openblas:windows-x86_64:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:opencv:android-arm:4.3.0-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:opencv:android-arm64:4.3.0-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:opencv:android-x86:4.3.0-1.5.3" level="project" />
