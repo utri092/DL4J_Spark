@@ -29,28 +29,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add print statements for BenchMarkTrainDistributed to determine out of memory problem on A-Fogs">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_keyvault_core_0_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_4_41_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_5_4_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_1_0_incubating.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core4_4_1_0_incubating.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add trial Code to investigate Out of memory failure">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602137208204</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add trial Code to investigate Out of memory failure">
+      <created>1602138988770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602138988770</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +338,8 @@
     <MESSAGE value="changed the master to spark A-fog" />
     <MESSAGE value="create distributed training class" />
     <MESSAGE value="Add print statements for BenchMarkTrainDistributed to determine out of memory problem on A-Fogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add print statements for BenchMarkTrainDistributed to determine out of memory problem on A-Fogs" />
+    <MESSAGE value="Add trial Code to investigate Out of memory failure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add trial Code to investigate Out of memory failure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -448,10 +438,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602137209405">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602138991203">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602137209405" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602138991203" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>

@@ -46,6 +46,7 @@ public class BenchMarkTrainDistributed2 {
         return sparkNet;
 
     }
+
     public static void main(String[] args) throws Exception {
         int warmup = 5;
         int iterations = 100;
