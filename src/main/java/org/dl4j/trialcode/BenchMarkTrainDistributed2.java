@@ -52,7 +52,7 @@ public class BenchMarkTrainDistributed2 {
         int iterations = 100;
         int numFeaturesFromFirstColumn = 2;   // No of feature columns from the start to end of row
         int numLabelsAfterLastFeatureColumn = 1;    // No of labels after the last feature column
-        int batchsize = 2048; // Not used yet
+        int batchsize = 10; // Not used yet
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
