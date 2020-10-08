@@ -30,13 +30,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add trial Code">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-2_converted.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-3_converted.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/model.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/model.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_20__7_05_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_20__7_05_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="D:\Software\IntelliJ_IDEA_2020.1.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -115,17 +111,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.BenchMarkTrainLocalHDFS">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BenchMarkInferenceLocalModeHDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS" />
       <module name="deeplearning4j-example-sample" />
@@ -191,6 +176,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.BenchMarkTrainLocalMode" />
       <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
@@ -221,6 +219,7 @@
       <updated>1601436642546</updated>
       <workItem from="1601504434578" duration="8658000" />
       <workItem from="1601543595021" duration="6529000" />
+      <workItem from="1602146823150" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="Distributed Inference method feedForwardWithKey() compiles&#10;predict() method does not work yet">
       <created>1601686408126</created>
