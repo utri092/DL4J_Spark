@@ -107,15 +107,15 @@ public class BenchMarkTrainDistributed {
                 .averagingFrequency(5).workerPrefetchNumBatches(2)
                 .build();
 
-
-
-
 //        System.out.println(model.getLayers());
 //        System.out.println(model.getLayerWiseConfigurations());
+        System.out.println("------Beginning Training------");
 
 
         for(int j = 0; j < warmup; j++){
+            System.out.printf("\nWarmup: %s", warmup);
             for (int i = 0; i < numEpochs; i++) {
+                System.out.printf("\nEpoch: %s", numEpochs);
                 // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
                 //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
                 sparkNet.fit(trainingData);
@@ -136,7 +136,11 @@ public class BenchMarkTrainDistributed {
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
-        System.out.println(duration/1000000000);
+
+        long timeStamp = duration/1000000000;
+
+
+        System.out.println(timeStamp);
         System.out.println("DONE TRAINING");
 
 
