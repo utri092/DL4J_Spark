@@ -30,7 +30,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add print statements for BenchMarkTrainDistributed to determine out of memory problem on A-Fogs">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainDistributed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainDistributed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_keyvault_core_0_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_4_41_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_5_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_1_0_incubating.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core4_4_1_0_incubating.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +78,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
         <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
@@ -82,28 +103,29 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/model" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.dl4j.benchmarks" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/datasets" />
       <recent name="$PROJECT_DIR$/src/main/resources/model" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.dl4j.trialcode" />
+      <recent name="org.dl4j.benchmarks" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/model" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean compile" />
-      <command value="mvn clean" />
       <command value="mvn clean install" />
+      <command value="mvn clean" />
     </option>
   </component>
   <component name="RunManager" selected="Application.BenchMarkTrainDistributed">
@@ -277,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602136805348</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add print statements for BenchMarkTrainDistributed to determine out of memory problem on A-Fogs">
+      <created>1602137208204</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602137208204</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,54 +386,54 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="460" key="GridCell.Tab.0.bottom" timestamp="1602136817131">
+    <state width="1807" height="447" key="GridCell.Tab.0.bottom" timestamp="1602138183167">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="460" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602136817131" />
-    <state width="1807" height="460" key="GridCell.Tab.0.center" timestamp="1602136817129">
+    <state width="1807" height="447" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183167" />
+    <state width="1807" height="447" key="GridCell.Tab.0.center" timestamp="1602138183167">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="460" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602136817129" />
-    <state width="1807" height="460" key="GridCell.Tab.0.left" timestamp="1602136817128">
+    <state width="1807" height="447" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183167" />
+    <state width="1807" height="447" key="GridCell.Tab.0.left" timestamp="1602138183167">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="460" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602136817128" />
-    <state width="1807" height="460" key="GridCell.Tab.0.right" timestamp="1602136817130">
+    <state width="1807" height="447" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183167" />
+    <state width="1807" height="447" key="GridCell.Tab.0.right" timestamp="1602138183167">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="460" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602136817130" />
-    <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1601968385615">
+    <state width="1807" height="447" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183167" />
+    <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="447" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385615" />
-    <state width="1807" height="447" key="GridCell.Tab.1.center" timestamp="1601968385615">
+    <state width="1807" height="447" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183168" />
+    <state width="1807" height="447" key="GridCell.Tab.1.center" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="447" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385615" />
-    <state width="1807" height="447" key="GridCell.Tab.1.left" timestamp="1601968385614">
+    <state width="1807" height="447" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183168" />
+    <state width="1807" height="447" key="GridCell.Tab.1.left" timestamp="1602138183167">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="447" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385614" />
-    <state width="1807" height="447" key="GridCell.Tab.1.right" timestamp="1601968385615">
+    <state width="1807" height="447" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183167" />
+    <state width="1807" height="447" key="GridCell.Tab.1.right" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="447" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601968385615" />
+    <state width="1807" height="447" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602138183168" />
     <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -414,14 +443,15 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="247" y="128" width="1482" height="968" key="MergeDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601964366037" />
-    <state x="2369" y="174" width="1024" height="845" key="SettingsEditor" timestamp="1601545207114">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602136964826">
+    <state x="500" y="216" width="1024" height="845" key="SettingsEditor" timestamp="1602138469206">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602136964826" />
+    <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
+    <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602137209405">
+      <screen x="67" y="27" width="1853" height="1173" />
+    </state>
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602137209405" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -430,10 +460,10 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1173@67.27.1853.1173" timestamp="1601692672447" />
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1601698319409">
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1602138114577">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1601698319409" />
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602138114577" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

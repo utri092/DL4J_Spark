@@ -43,7 +43,7 @@
         <jfreechart.version>1.0.13</jfreechart.version>
         <logback.version>1.1.7</logback.version>
         <jcommander.version>1.27</jcommander.version>
-        <azure.hadoop.version>2.7.4</azure.hadoop.version>
+        <azure.hadoop.version>2.9.2</azure.hadoop.version>
         <azure.storage.version>2.0.0</azure.storage.version>
         <spark.version>2.4.5</spark.version>
         <aws.sdk.version>1.11.109</aws.sdk.version>
