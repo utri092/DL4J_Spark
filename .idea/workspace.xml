@@ -29,14 +29,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add trial Code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSTen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSTwelve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_windows_x86_64_0_3_9_1_5_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_windows_x86_64_0_3_9_1_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_1_5_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_windows_x86_64_1_0_0_beta7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_linux_x86_64_1_0_0_beta7.xml" afterDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add Larger dataset-1 in resources/benchmarks">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_keyvault_core_0_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_5_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_4_41_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core4_4_1_0_incubating.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainLocalHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainLocalHDFS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602143176089</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add Larger dataset-1 in resources/benchmarks">
+      <created>1602148001169</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602148001169</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +381,8 @@
     <MESSAGE value="Add trial Code to investigate Out of memory failure" />
     <MESSAGE value="Add trial Code to investigate for DistributedInference" />
     <MESSAGE value="Add trial Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add trial Code" />
+    <MESSAGE value="Add Larger dataset-1 in resources/benchmarks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Larger dataset-1 in resources/benchmarks" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -399,30 +419,30 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="458" key="GridCell.Tab.0.bottom" timestamp="1602143327746">
+    <state width="1807" height="376" key="GridCell.Tab.0.bottom" timestamp="1602148466681">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="458" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327746" />
-    <state width="1807" height="458" key="GridCell.Tab.0.center" timestamp="1602143327745">
+    <state width="1807" height="376" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602148466681" />
+    <state width="1807" height="376" key="GridCell.Tab.0.center" timestamp="1602148466681">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="458" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327745" />
-    <state width="1807" height="458" key="GridCell.Tab.0.left" timestamp="1602143327744">
+    <state width="1807" height="376" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602148466681" />
+    <state width="1807" height="376" key="GridCell.Tab.0.left" timestamp="1602148466680">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="458" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327744" />
-    <state width="1807" height="458" key="GridCell.Tab.0.right" timestamp="1602143327746">
+    <state width="1807" height="376" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602148466680" />
+    <state width="1807" height="376" key="GridCell.Tab.0.right" timestamp="1602148466681">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="458" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327746" />
+    <state width="1807" height="376" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602148466681" />
     <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -461,10 +481,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602143177255">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602148003424">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602143177255" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602148003424" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>

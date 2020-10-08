@@ -116,12 +116,12 @@ public class BenchMarkTrainLocalHDFS {
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < numEpochs; i++) {
-            System.out.printf("\nEpoch: %s", numEpochs);
+//        for (int i = 0; i < numEpochs; i++) {
+//            System.out.printf("\nEpoch: %s", numEpochs);
             // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
             //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
             sparkNet.fit(trainingData);
-        }
+//        }
 
         long endTime = System.nanoTime();
 
