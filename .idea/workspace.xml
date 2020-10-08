@@ -29,7 +29,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add trial Code BenchMarkInferenceDistributed who=ich reads from local directory.">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add trial Code">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-2_converted.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-3_converted.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/model.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/model.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/results.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +114,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BenchMarkInferenceLocalModeHDFS">
+  <component name="RunManager" selected="Application.BenchMarkTrainLocalHDFS">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -194,8 +200,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
         <item itemvalue="Application.BenchMarkTrainLocalHDFS" />
+        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
         <item itemvalue="Application.BenchMarkTrainDistributed1" />
         <item itemvalue="Application.BenchMarkTrainDistributed" />
         <item itemvalue="Application.BenchMarkTrainLocalMode" />
@@ -300,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602141308385</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add trial Code">
+      <created>1602143176089</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602143176089</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +358,8 @@
     <MESSAGE value="Add print statements for BenchMarkTrainDistributed to determine out of memory problem on A-Fogs" />
     <MESSAGE value="Add trial Code to investigate Out of memory failure" />
     <MESSAGE value="Add trial Code to investigate for DistributedInference" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add trial Code to investigate for DistributedInference" />
+    <MESSAGE value="Add trial Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add trial Code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -382,30 +396,30 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="285" key="GridCell.Tab.0.bottom" timestamp="1602142893192">
+    <state width="1807" height="458" key="GridCell.Tab.0.bottom" timestamp="1602143327746">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="285" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602142893192" />
-    <state width="1807" height="285" key="GridCell.Tab.0.center" timestamp="1602142893192">
+    <state width="1807" height="458" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327746" />
+    <state width="1807" height="458" key="GridCell.Tab.0.center" timestamp="1602143327745">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="285" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602142893192" />
-    <state width="1807" height="285" key="GridCell.Tab.0.left" timestamp="1602142893192">
+    <state width="1807" height="458" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327745" />
+    <state width="1807" height="458" key="GridCell.Tab.0.left" timestamp="1602143327744">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="285" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602142893192" />
-    <state width="1807" height="285" key="GridCell.Tab.0.right" timestamp="1602142893192">
+    <state width="1807" height="458" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327744" />
+    <state width="1807" height="458" key="GridCell.Tab.0.right" timestamp="1602143327746">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="285" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602142893192" />
+    <state width="1807" height="458" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602143327746" />
     <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -444,10 +458,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602141310323">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602143177255">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602141310323" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602143177255" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>

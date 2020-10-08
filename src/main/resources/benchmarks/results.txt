@@ -1,0 +1,32 @@
+# Local Training Benchmarks 
+
+## dataset-1_converted.csv
+
+### Iterations = 10, epochs = 50
+
+Cores = 4 cores
+
+# TrainingMaster = ParameterAveragingTrainingMaster without BatchsizePerWorker settings
+
+Time Taken = 5436371623273 ns, about 90 minutes
+
+# TrainingMaster = ParameterAveragingTrainingMaster with BatchsizePerWorker=2048 settings
+
+Time Taken = 80 s
+
+# TrainingMaster = ParameterAveragingTrainingMaster with BatchsizePerWorker=2048 and averagingFrequency=5
+
+Time Taken = 75 s
+
+# TrainingMaster = ParameterAveragingTrainingMaster with BatchsizePerWorker=2048 and averagingFrequency=5
+
+### Iterations = 100, epochs = 50
+
+Trial 1: Time Taken = 551 s, about 9 minutes
+
+Trial 2: Time Taken = 546 s, about 9 minutes
+
+# Local Inference Benchmarks
+
+## dataset-1_converted.csv
+Time taken = 3-4 seconds
