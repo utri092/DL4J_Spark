@@ -34,6 +34,7 @@ public class BenchMarkTrainLocalMode {
         SparkConf conf = new SparkConf();
         conf.setAppName("BenchMarkTrainLocalMode");
         conf.setMaster("local[4]");
+
         /*conf.setMaster("spark://192.168.137.224:7077")*/;
 
         JavaSparkContext sc = new JavaSparkContext(conf);

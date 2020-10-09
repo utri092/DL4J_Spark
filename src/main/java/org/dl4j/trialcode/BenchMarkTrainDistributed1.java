@@ -10,12 +10,16 @@ import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.writable.Writable;
 import org.datavec.spark.transform.misc.StringToWritablesFunction;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.deeplearning4j.optimize.solvers.accumulation.encoding.threshold.AdaptiveThresholdAlgorithm;
 import org.deeplearning4j.spark.api.TrainingMaster;
 import org.deeplearning4j.spark.datavec.DataVecDataSetFunction;
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer;
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
+import org.deeplearning4j.spark.parameterserver.training.SharedTrainingMaster;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.dataset.DataSet;
+import org.nd4j.parameterserver.distributed.conf.VoidConfiguration;
+import org.nd4j.parameterserver.distributed.v2.enums.MeshBuildMode;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -58,6 +62,8 @@ public class BenchMarkTrainDistributed1 {
         conf.setAppName("BenchMarkTrainDistributed");
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
+        conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
+        conf.set("spark.executor.extraClassPath","target/");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 
@@ -106,6 +112,29 @@ public class BenchMarkTrainDistributed1 {
                 .averagingFrequency(5).workerPrefetchNumBatches(2)
                 .build();
 
+
+        /*//Set up TrainingMaster for gradient sharing training
+        VoidConfiguration voidConfiguration = VoidConfiguration.builder()
+                .unicastPort(40123)                          // Should be open for IN/OUT communications on all Spark nodes
+                .networkMask("255.255.255.0")                   // Local network mask - for example, 10.0.0.0/16 - see https://deeplearning4j.konduit.ai/distributed-deep-learning/parameter-server#netmask
+                .controllerAddress("spark://192.168.137.224:7077")                // IP address of the master/driver node
+                .meshBuildMode(MeshBuildMode.PLAIN)
+                .build();
+
+
+        int minibatch =30;
+        int numWorkersPerNode = 1;
+
+
+        double gradientThreshold = 0.001;
+        tm = new SharedTrainingMaster.Builder(voidConfiguration, minibatch)
+                .rngSeed(12345)
+                .collectTrainingStats(false)
+                .batchSizePerWorker(minibatch)              // Minibatch size for each worker
+                .thresholdAlgorithm(new AdaptiveThresholdAlgorithm(gradientThreshold))     //Threshold algorithm determines the encoding threshold to be use. See docs for details
+                .workersPerNode(numWorkersPerNode)          // Workers per node
+                .build();
+*/
 //        System.out.println(model.getLayers());
 //        System.out.println(model.getLayerWiseConfigurations());
         System.out.println("------Beginning Training------");
@@ -115,12 +144,12 @@ public class BenchMarkTrainDistributed1 {
 
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < numEpochs; i++) {
-            System.out.printf("\nEpoch: %s", numEpochs);
+        //for (int i = 0; i < numEpochs; i++) {
+            //System.out.printf("\nEpoch: %s", numEpochs);
             // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
             //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
             sparkNet.fit(trainingData);
-        }
+        //}
 
         long endTime = System.nanoTime();
 
