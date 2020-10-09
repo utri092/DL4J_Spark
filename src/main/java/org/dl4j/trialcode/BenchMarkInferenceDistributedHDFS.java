@@ -31,7 +31,7 @@ public class BenchMarkInferenceDistributedHDFS {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JInferenceDistributed");
+        conf.setAppName("DL4JInferenceDistributedHDFS");
         //conf.setMaster("local[*]");
         conf.setMaster("spark://192.168.137.224:7077");
 

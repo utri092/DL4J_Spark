@@ -32,7 +32,7 @@ public class BenchMarkInferenceLocalModeHDFS {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JTrain");
+        conf.setAppName("DL4JInferenceLocalModeHDFS");
         conf.setMaster("local[*]");
 
         return new JavaSparkContext(conf);

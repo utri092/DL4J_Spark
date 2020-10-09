@@ -5,11 +5,11 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
 public class CreatePartitionsFromDataset {
-
+    //TODO: Not finished
     public static void main(String[] args) throws Exception {
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JTrain");
+        conf.setAppName("CreatePartitionsFromDataset");
         conf.setMaster("local[4]");
 
         JavaSparkContext sc = new JavaSparkContext(conf);

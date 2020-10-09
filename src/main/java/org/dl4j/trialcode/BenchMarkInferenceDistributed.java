@@ -31,7 +31,7 @@ public class BenchMarkInferenceDistributed {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JTrain");
+        conf.setAppName("DL4JInferenceDistributed");
 //        conf.setMaster("local[*]");
         conf.setMaster("spark://192.168.137.224:7077");
 

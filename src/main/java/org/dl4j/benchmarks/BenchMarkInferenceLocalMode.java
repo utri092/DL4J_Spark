@@ -33,7 +33,7 @@ public class BenchMarkInferenceLocalMode {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JTrain");
+        conf.setAppName("DL4JInferenceLocalMode");
         conf.setMaster("local[*]");
 
         return new JavaSparkContext(conf);

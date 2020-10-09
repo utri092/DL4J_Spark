@@ -59,7 +59,7 @@ public class BenchMarkTrainDistributed1 {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainDistributed");
+        conf.setAppName("BenchMarkTrainDistributed1");
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
         conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");

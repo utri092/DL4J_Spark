@@ -56,7 +56,7 @@ public class BenchMarkTrainLocalHDFS {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainDistributed");
+        conf.setAppName("BenchMarkTrainLocalHDFS");
         conf.setMaster("local[4]");
 //        conf.setMaster("spark://192.168.137.224:7077");
 
