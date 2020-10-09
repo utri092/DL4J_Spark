@@ -29,19 +29,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="modified trial trainDistributed 1 by removing timestamp ops">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSHundred.java" afterDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add 50x and 100x dataset-1_converted.csv">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSAll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSTwelve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSFifty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted_10x.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted_10x.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/benchmarks/dataset-1_converted_12x_6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/inferences/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/inferences/.part-00000.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/inferences/.part-00001.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/inferences/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/inferences/part-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/inferences/part-00001" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +109,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BenchMarkTrainDistributed1">
+  <component name="RunManager" selected="Application.BenchMarkInferenceDistributedHDFSAll">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -146,12 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchMarkInferenceLocalModeHDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS" />
+    <configuration name="BenchMarkInferenceDistributedHDFSAll" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.trialcode.BenchMarkInferenceDistributedHDFSAll" />
       <module name="deeplearning4j-example-sample" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dl4j.benchmarks.*" />
+          <option name="PATTERN" value="org.dl4j.trialcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,8 +149,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchMarkTrainDistributed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkTrainDistributed" />
+    <configuration name="BenchMarkInferenceLocalModeHDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS" />
       <module name="deeplearning4j-example-sample" />
       <extension name="coverage">
         <pattern>
@@ -200,18 +190,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
-      <item itemvalue="Application.BenchMarkTrainDistributed" />
       <item itemvalue="Application.BenchMarkTrainDistributed1" />
       <item itemvalue="Application.BenchMarkTrainLocalHDFS" />
       <item itemvalue="Application.BenchMarkInferenceDistributedHDFS" />
+      <item itemvalue="Application.BenchMarkInferenceDistributedHDFSAll" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BenchMarkInferenceDistributedHDFSAll" />
         <item itemvalue="Application.BenchMarkTrainDistributed1" />
         <item itemvalue="Application.BenchMarkInferenceDistributedHDFS" />
         <item itemvalue="Application.BenchMarkTrainLocalHDFS" />
         <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
-        <item itemvalue="Application.BenchMarkTrainDistributed" />
       </list>
     </recent_temporary>
   </component>
@@ -356,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602223625586</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add 50x and 100x dataset-1_converted.csv">
+      <created>1602229857622</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602229857622</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +404,8 @@
     <MESSAGE value="batch size down to 10" />
     <MESSAGE value="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet" />
     <MESSAGE value="modified trial trainDistributed 1 by removing timestamp ops" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified trial trainDistributed 1 by removing timestamp ops" />
+    <MESSAGE value="Add 50x and 100x dataset-1_converted.csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 50x and 100x dataset-1_converted.csv" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -444,30 +442,30 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="585" key="GridCell.Tab.0.bottom" timestamp="1602222841854">
+    <state width="1807" height="126" key="GridCell.Tab.0.bottom" timestamp="1602232339000">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="585" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841854" />
-    <state width="1807" height="585" key="GridCell.Tab.0.center" timestamp="1602222841854">
+    <state width="1807" height="126" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602232339000" />
+    <state width="1807" height="126" key="GridCell.Tab.0.center" timestamp="1602232338999">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="585" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841854" />
-    <state width="1807" height="585" key="GridCell.Tab.0.left" timestamp="1602222841853">
+    <state width="1807" height="126" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602232338999" />
+    <state width="1807" height="126" key="GridCell.Tab.0.left" timestamp="1602232338999">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="585" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841853" />
-    <state width="1807" height="585" key="GridCell.Tab.0.right" timestamp="1602222841854">
+    <state width="1807" height="126" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602232338999" />
+    <state width="1807" height="126" key="GridCell.Tab.0.right" timestamp="1602232339000">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="585" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841854" />
+    <state width="1807" height="126" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602232339000" />
     <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -510,10 +508,14 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602223626692">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602229862316">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602223626692" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602229862316" />
+    <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602232217357">
+      <screen x="67" y="27" width="1853" height="1173" />
+    </state>
+    <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1173@67.27.1853.1173" timestamp="1602232217357" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
