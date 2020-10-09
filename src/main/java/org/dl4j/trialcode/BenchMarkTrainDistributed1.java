@@ -63,8 +63,8 @@ public class BenchMarkTrainDistributed1 {
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
         conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
-        conf.set("spark.executor.extraClassPath","target/");
-
+//        conf.set("spark.executor.extraClassPath","target/");
+//
         JavaSparkContext sc = new JavaSparkContext(conf);
 
        /* SparkConf conf = new SparkConf();
@@ -109,7 +109,7 @@ public class BenchMarkTrainDistributed1 {
         // very basic need to explore further
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1)
                 .batchSizePerWorker(batchsize)
-                .averagingFrequency(5).workerPrefetchNumBatches(2)
+//                .averagingFrequency(5).workerPrefetchNumBatches(2)
                 .build();
 
 
@@ -142,7 +142,7 @@ public class BenchMarkTrainDistributed1 {
 
         System.out.println("Before Train!");
 
-        long startTime = System.nanoTime();
+//        long startTime = System.nanoTime();
 
         //for (int i = 0; i < numEpochs; i++) {
             //System.out.printf("\nEpoch: %s", numEpochs);
@@ -151,14 +151,14 @@ public class BenchMarkTrainDistributed1 {
             sparkNet.fit(trainingData);
         //}
 
-        long endTime = System.nanoTime();
+//        long endTime = System.nanoTime();
 
-        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
+//        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
 
-        long timeStamp = duration/1000000000;
+//        long timeStamp = duration/1000000000;
 
 
-        System.out.println(timeStamp);
+//        System.out.println(timeStamp);
         System.out.println("DONE TRAINING");
 
 

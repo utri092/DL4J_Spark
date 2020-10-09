@@ -29,34 +29,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="batch size down to 10">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jamesmurty_utils_java_xmlbuilder_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_azure_azure_storage_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jets3t_jets3t_0_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_6_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_azure_2_7_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_7_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_1_0_incubating.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_sslengine_6_1_26.xml" beforeDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributed1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/deeplearning4j-examples/dl4j-examples" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -358,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602194909951</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet">
+      <created>1602214238405</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1602214238405</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +388,8 @@
     <MESSAGE value="Add Larger dataset-1 in resources/benchmarks" />
     <MESSAGE value="Changed hadoop version back to 2.7.4" />
     <MESSAGE value="batch size down to 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="batch size down to 10" />
+    <MESSAGE value="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -431,11 +413,11 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="725" y="430" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601438276421" />
-    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl" timestamp="1601696092719">
+    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602218335310">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601544458019" />
-    <state x="761" y="322" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1601696092719" />
+    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602218335310" />
     <state x="773" y="512" key="Github.ShareDialog" timestamp="1601437771713">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -444,30 +426,30 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="462" key="GridCell.Tab.0.bottom" timestamp="1602213586634">
+    <state width="1807" height="585" key="GridCell.Tab.0.bottom" timestamp="1602222841854">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="462" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602213586634" />
-    <state width="1807" height="462" key="GridCell.Tab.0.center" timestamp="1602213586634">
+    <state width="1807" height="585" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841854" />
+    <state width="1807" height="585" key="GridCell.Tab.0.center" timestamp="1602222841854">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="462" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602213586634" />
-    <state width="1807" height="462" key="GridCell.Tab.0.left" timestamp="1602213586634">
+    <state width="1807" height="585" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841854" />
+    <state width="1807" height="585" key="GridCell.Tab.0.left" timestamp="1602222841853">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="462" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602213586634" />
-    <state width="1807" height="462" key="GridCell.Tab.0.right" timestamp="1602213586634">
+    <state width="1807" height="585" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841853" />
+    <state width="1807" height="585" key="GridCell.Tab.0.right" timestamp="1602222841854">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="462" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602213586634" />
+    <state width="1807" height="585" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602222841854" />
     <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -506,10 +488,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602194912351">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602214242412">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602194912351" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602214242412" />
     <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -518,10 +500,10 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1173@67.27.1853.1173" timestamp="1601692672447" />
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1602138114577">
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1602214208491">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602138114577" />
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602214208491" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
