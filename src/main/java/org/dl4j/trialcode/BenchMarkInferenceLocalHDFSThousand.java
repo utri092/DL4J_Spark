@@ -27,13 +27,13 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceDistributedHDFSThousand {
+public class BenchMarkInferenceLocalHDFSThousand {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JInferenceDistributedHDFSThousand");
-        //conf.setMaster("local[*]");
-        conf.setMaster("spark://192.168.137.224:7077");
+        conf.setAppName("DL4JInferenceLocalHDFSThousand");
+        conf.setMaster("local[*]");
+//        conf.setMaster("spark://192.168.137.224:7077");
 
         return new JavaSparkContext(conf);
     }
@@ -53,7 +53,6 @@ public class BenchMarkInferenceDistributedHDFSThousand {
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
 
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
-
 
 
         return sparkNet;
