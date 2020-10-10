@@ -27,13 +27,13 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceDistributedHDFSFifty {
+public class BenchMarkInferenceLocalHDFSBig {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JInferenceDistributedHDFSFifty");
-        //conf.setMaster("local[*]");
-        conf.setMaster("spark://192.168.137.224:7077");
+        conf.setAppName("DL4JInferenceLocalHDFSThousand");
+        conf.setMaster("local[*]");
+//        conf.setMaster("spark://192.168.137.224:7077");
 
         return new JavaSparkContext(conf);
     }
@@ -53,7 +53,6 @@ public class BenchMarkInferenceDistributedHDFSFifty {
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
 
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
-
 
 
         return sparkNet;
@@ -90,7 +89,7 @@ public class BenchMarkInferenceDistributedHDFSFifty {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 1000;
+        int iterations = 10000;
 
         JavaSparkContext sc = startSparkSession();
 
@@ -99,7 +98,7 @@ public class BenchMarkInferenceDistributedHDFSFifty {
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted_50x.csv";
+        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/bigdata/*.csv";
 
         JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 

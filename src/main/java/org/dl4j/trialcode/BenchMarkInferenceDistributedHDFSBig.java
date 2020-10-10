@@ -27,7 +27,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceDistributedHDFSAll {
+public class BenchMarkInferenceDistributedHDFSBig {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
@@ -99,16 +99,15 @@ public class BenchMarkInferenceDistributedHDFSAll {
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/*.csv";
+        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/bigdata/*.csv";
 
         JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 
         System.out.println("Before Inferencing!");
 
-        long startTime = System.nanoTime();
-
         JavaPairRDD<String, INDArray> testPairs = testData.mapToPair(f-> new Tuple2("carparkOccupancy", f.getFeatures()));
 
+        long startTime = System.nanoTime();
 
         for(int i = 0 ; i < iterations; i++){
             JavaPairRDD<String, INDArray> predictions = makePredictions(testPairs, sparkNet);

@@ -104,9 +104,9 @@ public class BenchMarkInferenceLocalHDFSThousand {
 
         System.out.println("Before Inferencing!");
 
-        long startTime = System.nanoTime();
-
         JavaPairRDD<String, INDArray> testPairs = testData.mapToPair(f-> new Tuple2("carparkOccupancy", f.getFeatures()));
+
+        long startTime = System.nanoTime();
 
         for(int i = 0 ; i < iterations; i++){
             JavaPairRDD<String, INDArray> predictions = makePredictions(testPairs, sparkNet);
