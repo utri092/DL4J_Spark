@@ -10,16 +10,12 @@ import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.writable.Writable;
 import org.datavec.spark.transform.misc.StringToWritablesFunction;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
-import org.deeplearning4j.optimize.solvers.accumulation.encoding.threshold.AdaptiveThresholdAlgorithm;
 import org.deeplearning4j.spark.api.TrainingMaster;
 import org.deeplearning4j.spark.datavec.DataVecDataSetFunction;
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer;
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster;
-import org.deeplearning4j.spark.parameterserver.training.SharedTrainingMaster;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.parameterserver.distributed.conf.VoidConfiguration;
-import org.nd4j.parameterserver.distributed.v2.enums.MeshBuildMode;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -28,7 +24,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkTrainDistributedHDFS {
+public class BenchMarkTrainDistributedHDFSBig {
     public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
         //@detail Takes in HDFS string path and tries to get model.bin
 
@@ -59,7 +55,7 @@ public class BenchMarkTrainDistributedHDFS {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainDistributed1");
+        conf.setAppName("BenchMarkTrainDistributedHDFSBig");
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
         conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
@@ -97,7 +93,7 @@ public class BenchMarkTrainDistributedHDFS {
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String filePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv";
+        String filePath = "hdfs://afog-master:9000/part4-projects/resources/bigdata/*.csv";
         //"hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv"
         JavaRDD<String> rddString = sc.textFile(filePath);
         RecordReader recordReader = new CSVRecordReader(0, ',');

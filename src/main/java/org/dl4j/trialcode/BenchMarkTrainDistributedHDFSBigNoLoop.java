@@ -55,7 +55,7 @@ public class BenchMarkTrainDistributedHDFSBigNoLoop {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainDistributed1");
+        conf.setAppName("BenchMarkTrainDistributedHDFSBigNoLoop");
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
         conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
@@ -138,7 +138,7 @@ public class BenchMarkTrainDistributedHDFSBigNoLoop {
 
         System.out.println("Before Train!");
 
-//        long startTime = System.nanoTime();
+        long startTime = System.nanoTime();
 
 //        for (int i = 0; i < numEpochs; i++) {
             //System.out.printf("\nEpoch: %s", numEpochs);
@@ -147,14 +147,14 @@ public class BenchMarkTrainDistributedHDFSBigNoLoop {
             sparkNet.fit(trainingData);
 //        }
 
-//        long endTime = System.nanoTime();
+        long endTime = System.nanoTime();
 
-//        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
+        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
 
-//        long timeStamp = duration/1000000000;
+        long timeStamp = duration/1000000000;
 
 
-//        System.out.println(timeStamp);
+        System.out.println(timeStamp);
         System.out.println("DONE TRAINING");
 
 

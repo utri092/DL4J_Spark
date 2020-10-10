@@ -56,7 +56,7 @@ public class BenchMarkTrainDistributedHDFSNoLoop {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainDistributed2");
+        conf.setAppName("BenchMarkTrainDistributedHDFSNoLoop");
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
 
