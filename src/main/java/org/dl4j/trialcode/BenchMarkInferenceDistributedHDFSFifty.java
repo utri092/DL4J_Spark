@@ -109,17 +109,21 @@ public class BenchMarkInferenceDistributedHDFSFifty {
 
         long startTime = System.nanoTime();
 
+        JavaPairRDD<String, INDArray> predictions = null;
+
         for(int i = 0 ; i < iterations; i++){
-            JavaPairRDD<String, INDArray> predictions = makePredictions(testPairs, sparkNet);
+            predictions = makePredictions(testPairs, sparkNet);
         }
 
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
         System.out.println(duration/1000000000);
+        System.out.println(predictions.getClass());
         System.out.println("DONE Inferencing");
 
-        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
+
+//        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
 
     }
 
