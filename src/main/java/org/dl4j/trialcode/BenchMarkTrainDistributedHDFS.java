@@ -28,7 +28,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkTrainDistributed1 {
+public class BenchMarkTrainDistributedHDFS {
     public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
         //@detail Takes in HDFS string path and tries to get model.bin
 
@@ -144,12 +144,12 @@ public class BenchMarkTrainDistributed1 {
 
 //        long startTime = System.nanoTime();
 
-        //for (int i = 0; i < numEpochs; i++) {
+        for (int i = 0; i < numEpochs; i++) {
             //System.out.printf("\nEpoch: %s", numEpochs);
             // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
             //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
             sparkNet.fit(trainingData);
-        //}
+        }
 
 //        long endTime = System.nanoTime();
 

@@ -24,7 +24,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkTrainDistributed2 {
+public class BenchMarkTrainDistributedHDFSBigNoLoop {
     public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
         //@detail Takes in HDFS string path and tries to get model.bin
 
@@ -46,7 +46,6 @@ public class BenchMarkTrainDistributed2 {
         return sparkNet;
 
     }
-
     public static void main(String[] args) throws Exception {
         int warmup = 5;
         int iterations = 100;
@@ -56,10 +55,12 @@ public class BenchMarkTrainDistributed2 {
         int numEpochs = 50;
 
         SparkConf conf = new SparkConf();
-        conf.setAppName("BenchMarkTrainDistributed2");
+        conf.setAppName("BenchMarkTrainDistributed1");
         //conf.setMaster("local[4]");
         conf.setMaster("spark://192.168.137.224:7077");
-
+        conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
+//        conf.set("spark.executor.extraClassPath","target/");
+//
         JavaSparkContext sc = new JavaSparkContext(conf);
 
        /* SparkConf conf = new SparkConf();
@@ -92,7 +93,7 @@ public class BenchMarkTrainDistributed2 {
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String filePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv";
+        String filePath = "hdfs://afog-master:9000/part4-projects/resources/bigdata/*.csv";
         //"hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv"
         JavaRDD<String> rddString = sc.textFile(filePath);
         RecordReader recordReader = new CSVRecordReader(0, ',');
@@ -104,9 +105,32 @@ public class BenchMarkTrainDistributed2 {
         // very basic need to explore further
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1)
                 .batchSizePerWorker(batchsize)
-                .averagingFrequency(5).workerPrefetchNumBatches(2)
+//                .averagingFrequency(5).workerPrefetchNumBatches(2)
                 .build();
 
+
+        /*//Set up TrainingMaster for gradient sharing training
+        VoidConfiguration voidConfiguration = VoidConfiguration.builder()
+                .unicastPort(40123)                          // Should be open for IN/OUT communications on all Spark nodes
+                .networkMask("255.255.255.0")                   // Local network mask - for example, 10.0.0.0/16 - see https://deeplearning4j.konduit.ai/distributed-deep-learning/parameter-server#netmask
+                .controllerAddress("spark://192.168.137.224:7077")                // IP address of the master/driver node
+                .meshBuildMode(MeshBuildMode.PLAIN)
+                .build();
+
+
+        int minibatch =30;
+        int numWorkersPerNode = 1;
+
+
+        double gradientThreshold = 0.001;
+        tm = new SharedTrainingMaster.Builder(voidConfiguration, minibatch)
+                .rngSeed(12345)
+                .collectTrainingStats(false)
+                .batchSizePerWorker(minibatch)              // Minibatch size for each worker
+                .thresholdAlgorithm(new AdaptiveThresholdAlgorithm(gradientThreshold))     //Threshold algorithm determines the encoding threshold to be use. See docs for details
+                .workersPerNode(numWorkersPerNode)          // Workers per node
+                .build();
+*/
 //        System.out.println(model.getLayers());
 //        System.out.println(model.getLayerWiseConfigurations());
         System.out.println("------Beginning Training------");
@@ -114,18 +138,23 @@ public class BenchMarkTrainDistributed2 {
 
         System.out.println("Before Train!");
 
-        long startTime = System.nanoTime();
+//        long startTime = System.nanoTime();
 
-        sparkNet.fit(trainingData);
+//        for (int i = 0; i < numEpochs; i++) {
+            //System.out.printf("\nEpoch: %s", numEpochs);
+            // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
+            //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
+            sparkNet.fit(trainingData);
+//        }
 
-        long endTime = System.nanoTime();
+//        long endTime = System.nanoTime();
 
-        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
+//        long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
 
-        long timeStamp = duration/1000000000;
+//        long timeStamp = duration/1000000000;
 
 
-        System.out.println(timeStamp);
+//        System.out.println(timeStamp);
         System.out.println("DONE TRAINING");
 
 
