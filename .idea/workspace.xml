@@ -29,10 +29,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Updated sc app names to classNames">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add 100x dataset to local mode inference HDFS">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSThousand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/Inference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSHundred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSHundred.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,8 +111,8 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean compile" />
-      <command value="mvn clean install" />
       <command value="mvn clean" />
+      <command value="mvn clean install" />
     </option>
   </component>
   <component name="RunManager" selected="Application.BenchMarkInferenceDistributedHDFSAll">
@@ -368,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602232608146</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add 100x dataset to local mode inference HDFS">
+      <created>1602232849978</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1602232849978</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +434,8 @@
     <MESSAGE value="Add 50x and 100x dataset-1_converted.csv" />
     <MESSAGE value="Add DistributedInferenceHDFS ALL" />
     <MESSAGE value="Updated sc app names to classNames" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated sc app names to classNames" />
+    <MESSAGE value="Add 100x dataset to local mode inference HDFS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 100x dataset to local mode inference HDFS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -459,30 +472,30 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="126" key="GridCell.Tab.0.bottom" timestamp="1602232339000">
+    <state width="1807" height="333" key="GridCell.Tab.0.bottom" timestamp="1602297190619">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="126" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602232339000" />
-    <state width="1807" height="126" key="GridCell.Tab.0.center" timestamp="1602232338999">
+    <state width="1807" height="333" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602297190619" />
+    <state width="1807" height="333" key="GridCell.Tab.0.center" timestamp="1602297190617">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="126" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602232338999" />
-    <state width="1807" height="126" key="GridCell.Tab.0.left" timestamp="1602232338999">
+    <state width="1807" height="333" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602297190617" />
+    <state width="1807" height="333" key="GridCell.Tab.0.left" timestamp="1602297190616">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="126" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602232338999" />
-    <state width="1807" height="126" key="GridCell.Tab.0.right" timestamp="1602232339000">
+    <state width="1807" height="333" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602297190616" />
+    <state width="1807" height="333" key="GridCell.Tab.0.right" timestamp="1602297190618">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="126" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602232339000" />
+    <state width="1807" height="333" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602297190618" />
     <state width="1807" height="447" key="GridCell.Tab.1.bottom" timestamp="1602138183168">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -525,10 +538,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602232609350">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602232851764">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602232609350" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602232851764" />
     <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602232217357">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -541,10 +554,10 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1173@67.27.1853.1173" timestamp="1601692672447" />
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1602214208491">
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1602296014994">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602214208491" />
+    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602296014994" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

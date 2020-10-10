@@ -27,7 +27,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceDistributedHDFSHundred {
+public class BenchMarkInferenceDistributedHDFSThousand {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
@@ -99,7 +99,7 @@ public class BenchMarkInferenceDistributedHDFSHundred {
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted_100x.csv";
+        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted_1000x.csv";
 
         JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 

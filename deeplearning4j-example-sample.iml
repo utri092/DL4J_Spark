@@ -214,6 +214,10 @@
     <orderEntry type="library" name="Maven: org.bytedeco:flandmark:1.07-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:leptonica:1.79.0-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:tesseract:4.1.1-1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:11" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:linux:11" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:11" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:linux:11" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:opencv-platform:4.3.0-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas-platform:0.3.9-1.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.bytedeco:openblas:android-arm:0.3.9-1.5.3" level="project" />
