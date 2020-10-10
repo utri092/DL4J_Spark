@@ -29,16 +29,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add no loop for local inference and reverted back to azure hadoop">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSBigDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSBig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" afterDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add dynamic settings to be run from jar file instead of spark-submit in BenchMarkInferenceDistributedHDFSBigDynamic.java">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSBig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSBig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFSBig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFSBig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSBigNoLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSBigNoLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSNoLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSNoLoop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -430,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602369073088</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add dynamic settings to be run from jar file instead of spark-submit in BenchMarkInferenceDistributedHDFSBigDynamic.java">
+      <created>1602373250932</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1602373250932</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +463,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="benchmarks made and testing done" />
     <MESSAGE value="fixed some code to make local mode work" />
     <MESSAGE value="HDFS access from afog-master works&#10;Successfully retrieved csv dataset and model.bin file&#10;Haven't tried on cluster yet." />
     <MESSAGE value="changed the master to spark A-fog" />
@@ -489,7 +487,8 @@
     <MESSAGE value="Increased big dataset size and printing predictions class to ensure variable is not ignored during lazy evaluation" />
     <MESSAGE value="Add distributed training for bigdataset" />
     <MESSAGE value="Add no loop for local inference and reverted back to azure hadoop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add no loop for local inference and reverted back to azure hadoop" />
+    <MESSAGE value="Add dynamic settings to be run from jar file instead of spark-submit in BenchMarkInferenceDistributedHDFSBigDynamic.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dynamic settings to be run from jar file instead of spark-submit in BenchMarkInferenceDistributedHDFSBigDynamic.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -592,10 +591,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602369076757">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602373253948">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602369076757" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602373253948" />
     <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602232217357">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
