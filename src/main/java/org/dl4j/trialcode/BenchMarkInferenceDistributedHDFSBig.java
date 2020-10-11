@@ -29,7 +29,7 @@ import java.util.List;
 
 public class BenchMarkInferenceDistributedHDFSBig {
 
-    public static JavaSparkContext startSparkSession(){
+    public JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
         conf.setAppName("DL4JInferenceDistributedHDFSBig");
         //conf.setMaster("local[*]");
@@ -41,7 +41,7 @@ public class BenchMarkInferenceDistributedHDFSBig {
         return new JavaSparkContext(conf);
     }
 
-    public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
+    public SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
         //@detail Takes in HDFS string path and tries to get model.bin
 
         MultiLayerNetwork model = null;
@@ -63,7 +63,8 @@ public class BenchMarkInferenceDistributedHDFSBig {
 
     }
 
-    public static JavaRDD<DataSet> extractTestDataset(String filePath, JavaSparkContext sc){
+    public JavaRDD<DataSet> extractTestDataset(String filePath, JavaSparkContext sc){
+
         JavaRDD<String> rddString = sc.textFile(filePath);
         RecordReader recordReader = new CSVRecordReader(0, ',');
         JavaRDD<List<Writable>> rddWritables = rddString.map(new StringToWritablesFunction(recordReader));
@@ -80,7 +81,7 @@ public class BenchMarkInferenceDistributedHDFSBig {
         return testData;
     }
 
-    public static JavaPairRDD<String, INDArray> makePredictions( JavaPairRDD<String, INDArray> testPairs, SparkDl4jMultiLayer sparkNet){
+    public JavaPairRDD<String, INDArray> makePredictions( JavaPairRDD<String, INDArray> testPairs, SparkDl4jMultiLayer sparkNet){
         // @detail Tuple2: Scala class expects two arguments. Tuple3 and Tuple4 are alternatives
         // @arg-1: Name of label/s
         // @arg-2: INDArray of features from JavaRDD<Dataset>
@@ -92,19 +93,19 @@ public class BenchMarkInferenceDistributedHDFSBig {
 
     public static void main(String[] args) throws Exception {
 
+        BenchMarkInferenceDistributedHDFSBig inst = new BenchMarkInferenceDistributedHDFSBig();
 
         int iterations = 10000;
 
-        JavaSparkContext sc = startSparkSession();
-
+        JavaSparkContext sc = inst.startSparkSession();
 
         String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
-        SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
+        SparkDl4jMultiLayer sparkNet = inst.createModelFromBin(localModelPath, sc);
 
         String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/bigdata/*.csv";
 
-        JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
+        JavaRDD<DataSet> testData = inst.extractTestDataset(datafilePath, sc);
 
         System.out.println("Before Inferencing!");
 
@@ -115,7 +116,7 @@ public class BenchMarkInferenceDistributedHDFSBig {
         JavaPairRDD<String, INDArray> predictions = null;
 
         for(int i = 0 ; i < iterations; i++){
-            predictions = makePredictions(testPairs, sparkNet);
+            predictions = inst.makePredictions(testPairs, sparkNet);
         }
 
         long endTime = System.nanoTime();
