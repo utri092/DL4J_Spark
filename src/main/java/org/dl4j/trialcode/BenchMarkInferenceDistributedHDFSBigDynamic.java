@@ -31,14 +31,14 @@ public class BenchMarkInferenceDistributedHDFSBigDynamic {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JInferenceDistributedHDFSBig");
+        conf.setAppName("DL4JInferenceDistributedHDFSBigDynamic");
         //conf.setMaster("local[*]");
         conf.setMaster("spark://192.168.137.224:7077");
         conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
         conf.set("spark.dynamicAllocation.enabled", "true");
         conf.set("spark.shuffle.service.enabled", "true");
         conf.set("spark.executor.cores", "4");
-        conf.set("spark.dynamicAllocation.minExecutors","1");
+        conf.set("spark.dynamicAllocation.minExecutors","2");
         conf.set("spark.dynamicAllocation.maxExecutors","3");
 
         return new JavaSparkContext(conf);
@@ -59,8 +59,6 @@ public class BenchMarkInferenceDistributedHDFSBigDynamic {
         TrainingMaster tm = new ParameterAveragingTrainingMaster.Builder(1).build();
 
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
-
-
 
         return sparkNet;
 
@@ -95,11 +93,9 @@ public class BenchMarkInferenceDistributedHDFSBigDynamic {
 
     public static void main(String[] args) throws Exception {
 
-
         int iterations = 10000;
 
         JavaSparkContext sc = startSparkSession();
-
 
         String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
@@ -127,7 +123,6 @@ public class BenchMarkInferenceDistributedHDFSBigDynamic {
         System.out.println(duration/1000000000);
         System.out.println(predictions.getClass());
         System.out.println("DONE Inferencing");
-
 
 //        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
 

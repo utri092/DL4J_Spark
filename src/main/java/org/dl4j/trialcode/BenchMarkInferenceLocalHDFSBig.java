@@ -94,7 +94,6 @@ public class BenchMarkInferenceLocalHDFSBig {
 
         JavaSparkContext sc = inst.startSparkSession();
 
-
         String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
         SparkDl4jMultiLayer sparkNet = inst.createModelFromBin(localModelPath, sc);
