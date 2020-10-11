@@ -82,7 +82,7 @@ public class BenchMarkInferenceDistributedHDFSHundred {
         // @arg-1: Name of label/s
         // @arg-2: INDArray of features from JavaRDD<Dataset>
 
-        JavaPairRDD<String, INDArray> predictions = sparkNet.feedForwardWithKey(testPairs,5);
+        JavaPairRDD<String, INDArray> predictions = sparkNet.feedForwardWithKey(testPairs,2048);
 
         return predictions;
     }
