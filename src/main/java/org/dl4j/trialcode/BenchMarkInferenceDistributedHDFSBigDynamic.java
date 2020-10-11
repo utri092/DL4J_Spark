@@ -34,7 +34,9 @@ public class BenchMarkInferenceDistributedHDFSBigDynamic {
         conf.setAppName("DL4JInferenceDistributedHDFSBig");
         //conf.setMaster("local[*]");
         conf.setMaster("spark://192.168.137.224:7077");
+        conf.set("spark.hadoop.fs.defaultFS", "hdfs://afog-master:9000");
         conf.set("spark.dynamicAllocation.enabled", "true");
+        conf.set("spark.shuffle.service.enabled", "true");
         conf.set("spark.executor.cores", "4");
         conf.set("spark.dynamicAllocation.minExecutors","1");
         conf.set("spark.dynamicAllocation.maxExecutors","3");
