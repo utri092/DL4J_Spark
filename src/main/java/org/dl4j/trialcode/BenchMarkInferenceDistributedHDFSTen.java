@@ -90,7 +90,7 @@ public class BenchMarkInferenceDistributedHDFSTen {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 1000;
+        int iterations = 10000;
 
         JavaSparkContext sc = startSparkSession();
 
