@@ -93,7 +93,6 @@ public class BenchMarkInferenceLocalHDFSThousand {
 
         JavaSparkContext sc = startSparkSession();
 
-
         String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
@@ -119,6 +118,7 @@ public class BenchMarkInferenceLocalHDFSThousand {
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
         System.out.println(duration/1000000000);
         System.out.println(predictions.getClass());
+
         System.out.println("DONE Inferencing");
 
 

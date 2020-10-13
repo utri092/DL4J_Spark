@@ -27,18 +27,18 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceDistributedHDFS {
+public class BenchMarkInferenceLocalHDFS {
 
-    public static JavaSparkContext startSparkSession(){
+    public JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
-        conf.setAppName("DL4JInferenceDistributedHDFS");
-        //conf.setMaster("local[*]");
-        conf.setMaster("spark://192.168.137.224:7077");
+        conf.setAppName("DL4JInferenceLocalHDFSBig");
+        conf.setMaster("local[*]");
+//        conf.setMaster("spark://192.168.137.224:7077");
 
         return new JavaSparkContext(conf);
     }
 
-    public static SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
+    public SparkDl4jMultiLayer createModelFromBin(String modelPath, JavaSparkContext sc) throws IOException, URISyntaxException {
         //@detail Takes in HDFS string path and tries to get model.bin
 
         MultiLayerNetwork model = null;
@@ -55,12 +55,11 @@ public class BenchMarkInferenceDistributedHDFS {
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, net, tm);
 
 
-
         return sparkNet;
 
     }
 
-    public static JavaRDD<DataSet> extractTestDataset(String filePath, JavaSparkContext sc){
+    public JavaRDD<DataSet> extractTestDataset(String filePath, JavaSparkContext sc){
         JavaRDD<String> rddString = sc.textFile(filePath);
         RecordReader recordReader = new CSVRecordReader(0, ',');
         JavaRDD<List<Writable>> rddWritables = rddString.map(new StringToWritablesFunction(recordReader));
@@ -77,7 +76,7 @@ public class BenchMarkInferenceDistributedHDFS {
         return testData;
     }
 
-    public static JavaPairRDD<String, INDArray> makePredictions( JavaPairRDD<String, INDArray> testPairs, SparkDl4jMultiLayer sparkNet){
+    public JavaPairRDD<String, INDArray> makePredictions( JavaPairRDD<String, INDArray> testPairs, SparkDl4jMultiLayer sparkNet){
         // @detail Tuple2: Scala class expects two arguments. Tuple3 and Tuple4 are alternatives
         // @arg-1: Name of label/s
         // @arg-2: INDArray of features from JavaRDD<Dataset>
@@ -89,19 +88,19 @@ public class BenchMarkInferenceDistributedHDFS {
 
     public static void main(String[] args) throws Exception {
 
+        BenchMarkInferenceLocalHDFS inst = new BenchMarkInferenceLocalHDFS();
 
         int iterations = 10000;
 
-        JavaSparkContext sc = startSparkSession();
-
+        JavaSparkContext sc = inst.startSparkSession();
 
         String localModelPath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/model.bin";
 
-        SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
+        SparkDl4jMultiLayer sparkNet = inst.createModelFromBin(localModelPath, sc);
 
         String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv";
 
-        JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
+        JavaRDD<DataSet> testData = inst.extractTestDataset(datafilePath, sc);
 
         System.out.println("Before Inferencing!");
 
@@ -109,10 +108,10 @@ public class BenchMarkInferenceDistributedHDFS {
 
         long startTime = System.nanoTime();
 
-        JavaPairRDD<String, INDArray> predictions = null;
+        JavaPairRDD<String, INDArray> predictions= null;
 
         for(int i = 0 ; i < iterations; i++){
-            predictions = makePredictions(testPairs, sparkNet);
+            predictions = inst.makePredictions(testPairs, sparkNet);
         }
 
         long endTime = System.nanoTime();
@@ -125,8 +124,7 @@ public class BenchMarkInferenceDistributedHDFS {
 
         System.out.println("DONE Inferencing");
 
-
-//        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
+        //System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
 
     }
 

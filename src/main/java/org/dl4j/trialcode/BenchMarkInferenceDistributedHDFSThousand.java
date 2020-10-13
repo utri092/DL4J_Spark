@@ -90,7 +90,7 @@ public class BenchMarkInferenceDistributedHDFSThousand {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 10000;
+        int iterations = 1000;
 
         JavaSparkContext sc = startSparkSession();
 
@@ -120,8 +120,8 @@ public class BenchMarkInferenceDistributedHDFSThousand {
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
         System.out.println(duration/1000000000);
         System.out.println(predictions.getClass());
+        predictions.saveAsTextFile("./src/main/resources/inferences/");
         System.out.println("DONE Inferencing");
-
 
 //        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
 
