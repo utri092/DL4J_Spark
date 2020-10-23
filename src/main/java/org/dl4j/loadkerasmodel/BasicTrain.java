@@ -29,7 +29,7 @@ public class BasicTrain {
 
         MultiLayerNetwork model = KerasModelImport.importKerasSequentialModelAndWeights("./src/main/resources/model/model.h5", true);
 
-        String filePath = "./src/main/resources/datasets/dataset-1_small.csv";
+        String filePath = "./src/main/resources/datasets/dataset-1_converted.csv";
         JavaRDD<String> rddString = sc.textFile(filePath);
         RecordReader recordReader = new CSVRecordReader(0, ',');
         JavaRDD<List<Writable>> rddWritables = rddString.map(new StringToWritablesFunction(recordReader));
@@ -63,16 +63,23 @@ public class BasicTrain {
 
         SparkDl4jMultiLayer sparkNet = new SparkDl4jMultiLayer(sc, model, tm);
 
-
-
         System.out.println("Before Train!");
 
+        long startTime = System.nanoTime();
 
-        for (int i = 0; i < numEpochs; i++) {
-            // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
-            //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
-            sparkNet.fit(trainingData);
+
+        for(int j = 0; j < 1000; j++){
+            for (int i = 0; i < numEpochs; i++) {
+                // @note: For Hadoop HDFS direct pass using fitpaths() should be possible from docs
+                //       sparkNet.fit("./src/main/resources/datasets/dataset-1_converted.csv");
+                sparkNet.fit(trainingData);
+            }
         }
+
+        long endTime = System.nanoTime();
+
+
+        System.out.println((endTime - startTime)/1000000000);
 
         System.out.println("DONE TRAINING");
 

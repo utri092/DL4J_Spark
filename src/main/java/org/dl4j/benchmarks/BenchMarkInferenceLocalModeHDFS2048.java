@@ -28,7 +28,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-public class BenchMarkInferenceLocalModeHDFS {
+public class BenchMarkInferenceLocalModeHDFS2048 {
 
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();

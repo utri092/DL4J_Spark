@@ -29,14 +29,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Increased batchsize to 2048 from 5 for inference">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFS.java" afterDir="false" />
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add save predictions to file for BenchMarkInferenceDistributedHDFS.java and BenchMarkInferenceLocalHDFS.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_20,_7_05_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_20__7_05_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/mnistexample/LeNetMNIST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSThousand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSThousand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFSThousand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFSThousand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/loadkerasmodel/BasicTrain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/deeplearning4j-examples/dl4j-examples" />
+    <property name="last_opened_file_path" value="$USER_HOME$/DL4J_Spark-UI-exploring-Sang" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -97,8 +100,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources/model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.dl4j.trialcode" />
       <recent name="org.dl4j.benchmarks" />
+      <recent name="org.dl4j.trialcode" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/datasets" />
@@ -114,7 +117,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BenchMarkInferenceLocalHDFSBig">
+  <component name="RunManager" selected="Application.BasicTrain">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -124,6 +127,19 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicTrain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.loadkerasmodel.BasicTrain" />
+      <module name="deeplearning4j-example-sample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dl4j.loadkerasmodel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,8 +170,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchMarkInferenceLocalModeHDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS" />
+    <configuration name="BenchMarkInferenceLocalModeHDFS2048" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS2048" />
       <module name="deeplearning4j-example-sample" />
       <extension name="coverage">
         <pattern>
@@ -180,33 +196,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchMarkTrainLocalHDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.trialcode.BenchMarkTrainLocalHDFS" />
-      <module name="deeplearning4j-example-sample" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dl4j.trialcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
       <item itemvalue="Application.BenchMarkInferenceLocalMode" />
       <item itemvalue="Application.BenchMarkInferenceLocalHDFSBig" />
-      <item itemvalue="Application.BenchMarkTrainLocalHDFS" />
       <item itemvalue="Application.BenchMarkInferenceLocalModeHDFSBigNoLoop" />
+      <item itemvalue="Application.BasicTrain" />
+      <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BasicTrain" />
         <item itemvalue="Application.BenchMarkInferenceLocalHDFSBig" />
-        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS" />
+        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
         <item itemvalue="Application.BenchMarkInferenceLocalMode" />
         <item itemvalue="Application.BenchMarkInferenceLocalModeHDFSBigNoLoop" />
-        <item itemvalue="Application.BenchMarkTrainLocalHDFS" />
       </list>
     </recent_temporary>
   </component>
@@ -477,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602382796341</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add save predictions to file for BenchMarkInferenceDistributedHDFS.java and BenchMarkInferenceLocalHDFS.java">
+      <created>1602551885910</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1602551885910</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +521,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Add trial Code to investigate for DistributedInference" />
     <MESSAGE value="Add trial Code" />
     <MESSAGE value="Add Larger dataset-1 in resources/benchmarks" />
     <MESSAGE value="Changed hadoop version back to 2.7.4" />
@@ -536,7 +545,8 @@
     <MESSAGE value="Changed Big Benchmarks Inference tests to OOP approach" />
     <MESSAGE value="Remove spark configs from Distributed Inference for Big Dataset" />
     <MESSAGE value="Increased batchsize to 2048 from 5 for inference" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased batchsize to 2048 from 5 for inference" />
+    <MESSAGE value="Add save predictions to file for BenchMarkInferenceDistributedHDFS.java and BenchMarkInferenceLocalHDFS.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add save predictions to file for BenchMarkInferenceDistributedHDFS.java and BenchMarkInferenceLocalHDFS.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
@@ -560,11 +570,11 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="725" y="430" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601438276421" />
-    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602218335310">
+    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602737199290">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601544458019" />
-    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602218335310" />
+    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602737199290" />
     <state x="785" y="515" key="Github.CreateGistDialog" timestamp="1602452271001">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -577,54 +587,54 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="447" key="GridCell.Tab.0.bottom" timestamp="1602551125135">
+    <state width="1807" height="377" key="GridCell.Tab.0.bottom" timestamp="1603434702207">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="447" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602551125135" />
-    <state width="1807" height="447" key="GridCell.Tab.0.center" timestamp="1602551125135">
+    <state width="1807" height="377" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
+    <state width="1807" height="377" key="GridCell.Tab.0.center" timestamp="1603434702207">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="447" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602551125135" />
-    <state width="1807" height="447" key="GridCell.Tab.0.left" timestamp="1602551125135">
+    <state width="1807" height="377" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
+    <state width="1807" height="377" key="GridCell.Tab.0.left" timestamp="1603434702207">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="447" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602551125135" />
-    <state width="1807" height="447" key="GridCell.Tab.0.right" timestamp="1602551125135">
+    <state width="1807" height="377" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
+    <state width="1807" height="377" key="GridCell.Tab.0.right" timestamp="1603434702207">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
     <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="447" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602551125135" />
-    <state width="1807" height="611" key="GridCell.Tab.1.bottom" timestamp="1602551128698">
+    <state width="1807" height="377" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
+    <state width="1807" height="2" key="GridCell.Tab.1.bottom" timestamp="1603434376022">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="611" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602551128698" />
-    <state width="1807" height="611" key="GridCell.Tab.1.center" timestamp="1602551128698">
+    <state width="1807" height="2" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376022" />
+    <state width="1807" height="2" key="GridCell.Tab.1.center" timestamp="1603434376022">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="611" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602551128698" />
-    <state width="1807" height="611" key="GridCell.Tab.1.left" timestamp="1602551128698">
+    <state width="1807" height="2" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376022" />
+    <state width="1807" height="2" key="GridCell.Tab.1.left" timestamp="1603434376021">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="611" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602551128698" />
-    <state width="1807" height="611" key="GridCell.Tab.1.right" timestamp="1602551128698">
+    <state width="1807" height="2" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376021" />
+    <state width="1807" height="2" key="GridCell.Tab.1.right" timestamp="1603434376022">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
     <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="611" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602551128698" />
+    <state width="1807" height="2" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376022" />
     <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -643,10 +653,10 @@
     </state>
     <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
     <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602382797210">
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1602551887071">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602382797210" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602551887071" />
     <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602232217357">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
