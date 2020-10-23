@@ -98,7 +98,7 @@ public class BenchMarkInferenceLocalModeHDFS4096 {
 
         SparkDl4jMultiLayer sparkNet = createModelFromBin(localModelPath, sc);
 
-        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted_100x.csv";
+        String datafilePath = "hdfs://afog-master:9000/part4-projects/resources/benchmarks/dataset-1_converted.csv";
 
         JavaRDD<DataSet> testData = extractTestDataset(datafilePath, sc);
 
