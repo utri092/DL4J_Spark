@@ -5,3 +5,6 @@
  The model training and inference scripts are benchmarks, with results being used for the purposes of a Research Project
  
  See each folder and script for details.
+ 
+ ### Note
+ CSV format datasets need headers to be removed if using CSVRecordReader. Skipping lines does not work and is a bug.
