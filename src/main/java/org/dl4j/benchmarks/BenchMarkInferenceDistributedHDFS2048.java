@@ -125,9 +125,6 @@ public class BenchMarkInferenceDistributedHDFS2048 {
 
         System.out.println("DONE Inferencing");
 
-
-//        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
-
     }
 
 }
