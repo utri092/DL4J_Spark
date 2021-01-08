@@ -89,7 +89,7 @@ public class BenchMarkInferenceLocalModeHDFS4096 {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 10000;
+        int iterations = 50;
 
         JavaSparkContext sc = startSparkSession();
 
@@ -112,17 +112,18 @@ public class BenchMarkInferenceLocalModeHDFS4096 {
 
         for(int i = 0 ; i < iterations; i++){
             predictions = makePredictions(testPairs, sparkNet);
+
+            predictions.count();
+
         }
 
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
-        System.out.println(duration/1000000000);
-        System.out.println(predictions.getClass());
+        System.out.println("No of Records: " + predictions.count());
+        System.out.println("Total Time in milliS: " + duration/1000000);
+        System.out.println("Average Time in nanoS: " + duration / (iterations * predictions.count()));
         System.out.println("DONE Inferencing");
-
-
-//        System.out.println(sparkNet.getNetwork().getLayerWiseConfigurations());
 
     }
 

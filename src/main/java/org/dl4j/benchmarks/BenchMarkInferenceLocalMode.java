@@ -22,6 +22,7 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import scala.Tuple2;
 
+import java.awt.*;
 import java.io.*;
 import java.nio.file.Path;
 import java.util.List;
@@ -98,9 +99,9 @@ public class BenchMarkInferenceLocalMode {
         int lastColumnLabel = 1;    // No of labels after the last feature column
         JavaRDD<DataSet> testData = rddWritables.map(new DataVecDataSetFunction(firstColumnLabel, lastColumnLabel, true, null, null));
 
-        for (DataSet dataSet : testData.collect()) {
+        /*for (DataSet dataSet : testData.collect()) {
             System.out.println(dataSet.getFeatures());
-        }
+        }*/
 
         return testData;
     }
@@ -117,7 +118,7 @@ public class BenchMarkInferenceLocalMode {
 
     public static void main(String[] args) throws Exception {
 
-        int iterations = 10000;
+        int iterations = 50;
 
         JavaSparkContext sc = startSparkSession();
 
@@ -137,14 +138,21 @@ public class BenchMarkInferenceLocalMode {
 
         long startTime = System.nanoTime();
 
+        JavaPairRDD<String, INDArray> predictions = null;
+
         for(int i = 0 ; i < iterations; i++){
-           JavaPairRDD<String, INDArray> predictions = makePredictions(testPairs, sparkNet);
+            predictions = makePredictions(testPairs, sparkNet);
+
+            predictions.count();
+
         }
 
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);  //divide by 1000000 to get milliseconds
-        System.out.println(duration/1000000000);
+        System.out.println("No of Records: " + predictions.count());
+        System.out.println("Total Time in milliS: " + duration/1000000);
+        System.out.println("Average Time in nanoS: " + duration / (iterations * predictions.count()));
         System.out.println("DONE Inferencing");
 
     }

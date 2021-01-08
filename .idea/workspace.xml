@@ -29,27 +29,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Add Inference for local and distributed with batchsizes 2048-8192 and dataset-1 instead of dataset-1_100x">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSBig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSBigDynamic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSBigNoLoop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSFifty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSHundred.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSTen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceDistributedHDFSThousand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFSBig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalHDFSThousand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkInferenceLocalModeHDFSBigNoLoop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSBig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSBigDynamic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSBigNoLoop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainDistributedHDFSNoLoop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/trialcode/BenchMarkTrainLocalHDFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +114,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BasicTrain">
+  <component name="RunManager" selected="Application.BenchMarkInferenceLocalMode">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -214,10 +202,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BenchMarkInferenceLocalMode" />
         <item itemvalue="Application.BasicTrain" />
         <item itemvalue="Application.BenchMarkInferenceLocalHDFSBig" />
         <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
-        <item itemvalue="Application.BenchMarkInferenceLocalMode" />
         <item itemvalue="Application.BenchMarkInferenceLocalModeHDFSBigNoLoop" />
       </list>
     </recent_temporary>
@@ -510,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603492728872</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers">
+      <created>1610063809100</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610063809100</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +539,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Changed hadoop version back to 2.7.4" />
     <MESSAGE value="batch size down to 10" />
     <MESSAGE value="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet" />
     <MESSAGE value="modified trial trainDistributed 1 by removing timestamp ops" />
@@ -569,137 +563,8 @@
     <MESSAGE value="Add save predictions to file for BenchMarkInferenceDistributedHDFS.java and BenchMarkInferenceLocalHDFS.java" />
     <MESSAGE value="Add Inference for local and distributed with batchsizes 2048-8192" />
     <MESSAGE value="Add Inference for local and distributed with batchsizes 2048-8192 and dataset-1 instead of dataset-1_100x" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Inference for local and distributed with batchsizes 2048-8192 and dataset-1 instead of dataset-1_100x" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="646" y="171" key="#&lt;template&gt;_of_Application" timestamp="1601508148861">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="646" y="171" key="#&lt;template&gt;_of_Application/0.0.1920.1160@0.0.1920.1160" timestamp="1601508148861" />
-    <state x="657" y="199" key="#Inference" timestamp="1601508223222">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="657" y="199" key="#Inference/0.0.1920.1160@0.0.1920.1160" timestamp="1601508223222" />
-    <state x="833" y="122" key="#Project_Structure" timestamp="1601504486044">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="833" y="122" key="#Project_Structure/0.0.1920.1160@0.0.1920.1160" timestamp="1601504486044" />
-    <state x="451" y="270" width="1084" height="806" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602383115943">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="398" y="240" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1601508274364" />
-    <state x="451" y="270" width="1084" height="806" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1602383115943" />
-    <state x="725" y="430" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601438276421">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="725" y="430" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601438276421" />
-    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602737199290">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601544458019" />
-    <state x="761" y="322" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602737199290" />
-    <state x="785" y="515" key="Github.CreateGistDialog" timestamp="1602452271001">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="785" y="515" key="Github.CreateGistDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1602452271001" />
-    <state x="773" y="512" key="Github.ShareDialog" timestamp="1601437771713">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="773" y="512" key="Github.ShareDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437771713" />
-    <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog" timestamp="1601437779861">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="625" y="292" width="726" height="640" key="Github.UntrackedFilesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601437779861" />
-    <state width="1807" height="377" key="GridCell.Tab.0.bottom" timestamp="1603434702207">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
-    <state width="1874" height="453" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="377" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
-    <state width="1807" height="377" key="GridCell.Tab.0.center" timestamp="1603434702207">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
-    <state width="1874" height="453" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="377" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
-    <state width="1807" height="377" key="GridCell.Tab.0.left" timestamp="1603434702207">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
-    <state width="1874" height="453" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="377" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
-    <state width="1807" height="377" key="GridCell.Tab.0.right" timestamp="1603434702207">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516581416" />
-    <state width="1874" height="453" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550125447" />
-    <state width="1807" height="377" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1603434702207" />
-    <state width="1807" height="2" key="GridCell.Tab.1.bottom" timestamp="1603434376022">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
-    <state width="1874" height="197" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="2" key="GridCell.Tab.1.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376022" />
-    <state width="1807" height="2" key="GridCell.Tab.1.center" timestamp="1603434376022">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="180" key="GridCell.Tab.1.center/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
-    <state width="1874" height="197" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="2" key="GridCell.Tab.1.center/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376022" />
-    <state width="1807" height="2" key="GridCell.Tab.1.left" timestamp="1603434376021">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="180" key="GridCell.Tab.1.left/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
-    <state width="1874" height="197" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="2" key="GridCell.Tab.1.left/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376021" />
-    <state width="1807" height="2" key="GridCell.Tab.1.right" timestamp="1603434376022">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state width="1877" height="180" key="GridCell.Tab.1.right/0.0.1920.1160@0.0.1920.1160" timestamp="1601516549495" />
-    <state width="1874" height="197" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601550076983" />
-    <state width="1807" height="2" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1603434376022" />
-    <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1601544373618">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="10" y="235" key="Maven.ArtifactSearchDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1601506735639" />
-    <state x="2275" y="219" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601544373618" />
-    <state x="247" y="128" width="1482" height="968" key="MergeDialog" timestamp="1601964366037">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="247" y="128" width="1482" height="968" key="MergeDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1601964366037" />
-    <state x="698" y="296" width="580" height="633" key="RollbackChangesDialog" timestamp="1602229451174">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="698" y="296" width="580" height="633" key="RollbackChangesDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1602229451174" />
-    <state x="500" y="216" width="1024" height="845" key="SettingsEditor" timestamp="1602138469206">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="2369" y="174" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601545207114" />
-    <state x="500" y="216" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1602138469206" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1603492733208">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1603492733208" />
-    <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602232217357">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="607" y="226" width="762" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1173@67.27.1853.1173" timestamp="1602232217357" />
-    <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602136453891">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="774" y="527" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602136453891" />
-    <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601692672447">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="425" y="331" width="1127" height="647" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1173@67.27.1853.1173" timestamp="1601692672447" />
-    <state x="684" y="177" width="618" height="870" key="find.popup" timestamp="1602450482304">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="684" y="177" width="618" height="870" key="find.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602450482304" />
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup" timestamp="1602296014994">
-      <screen x="67" y="27" width="1853" height="1173" />
-    </state>
-    <state x="657" y="283" width="672" height="677" key="run.anything.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1602296014994" />
+    <MESSAGE value="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
