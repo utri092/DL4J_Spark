@@ -89,7 +89,7 @@ public class BenchMarkInferenceLocalModeHDFS8192 {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 50;
+        int iterations = 5;
 
         JavaSparkContext sc = startSparkSession();
 

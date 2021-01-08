@@ -29,12 +29,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers">
+    <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" afterDir="false" />
@@ -114,7 +113,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BenchMarkInferenceLocalMode">
+  <component name="RunManager" selected="Application.BenchMarkInferenceLocalModeHDFS2048">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -202,10 +201,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
         <item itemvalue="Application.BenchMarkInferenceLocalMode" />
         <item itemvalue="Application.BasicTrain" />
         <item itemvalue="Application.BenchMarkInferenceLocalHDFSBig" />
-        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
         <item itemvalue="Application.BenchMarkInferenceLocalModeHDFSBigNoLoop" />
       </list>
     </recent_temporary>
@@ -505,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610063809100</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation">
+      <created>1610068453378</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1610068453378</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +545,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="batch size down to 10" />
     <MESSAGE value="resolve datavec dependancy&#10;add spark configs for hadoop and add classpath not tested yet" />
     <MESSAGE value="modified trial trainDistributed 1 by removing timestamp ops" />
     <MESSAGE value="Add 50x and 100x dataset-1_converted.csv" />
@@ -564,7 +569,8 @@
     <MESSAGE value="Add Inference for local and distributed with batchsizes 2048-8192" />
     <MESSAGE value="Add Inference for local and distributed with batchsizes 2048-8192 and dataset-1 instead of dataset-1_100x" />
     <MESSAGE value="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed trialCode and unneccessary datasets as space depletes for inference programs on Rpi computers" />
+    <MESSAGE value="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
