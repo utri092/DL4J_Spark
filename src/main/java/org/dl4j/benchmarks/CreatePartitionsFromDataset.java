@@ -10,7 +10,7 @@ public class CreatePartitionsFromDataset {
 
         SparkConf conf = new SparkConf();
         conf.setAppName("CreatePartitionsFromDataset");
-        conf.setMaster("local[4]");
+        conf.setMaster("local[*]");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 

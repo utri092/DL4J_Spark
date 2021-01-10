@@ -2,6 +2,8 @@ package org.dl4j.benchmarks;
 
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -87,9 +89,9 @@ public class BenchMarkInferenceLocalModeHDFS8192 {
     }
 
     public static void main(String[] args) throws Exception {
+        Logger.getLogger("org.apache.spark").setLevel(Level.ERROR);
 
-
-        int iterations = 5;
+        int iterations = 50;
 
         JavaSparkContext sc = startSparkSession();
 

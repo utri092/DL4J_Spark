@@ -58,7 +58,7 @@ public class BenchMarkTrainDistributed {
         SparkConf conf = new SparkConf();
         conf.setAppName("BenchMarkTrainDistributed");
         //conf.setMaster("local[4]");
-        conf.setMaster("spark://192.168.137.224:7077");
+        conf.setMaster("spark://afog-master:7077");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 

@@ -2,6 +2,8 @@ package org.dl4j.benchmarks;
 
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -32,8 +34,7 @@ public class BenchMarkInferenceDistributedHDFS4096 {
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
         conf.setAppName("DL4JInferenceDistributedHDFS");
-        //conf.setMaster("local[*]");
-        conf.setMaster("spark://192.168.137.224:7077");
+        conf.setMaster("spark://afog-master:7077");
 
         return new JavaSparkContext(conf);
     }
@@ -90,7 +91,9 @@ public class BenchMarkInferenceDistributedHDFS4096 {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 5;
+        Logger.getLogger("org.apache.spark").setLevel(Level.ERROR);
+
+        int iterations = 50;
 
         JavaSparkContext sc = startSparkSession();
 

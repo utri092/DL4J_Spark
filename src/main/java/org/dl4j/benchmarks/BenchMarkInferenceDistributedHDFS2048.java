@@ -2,6 +2,8 @@ package org.dl4j.benchmarks;
 
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -32,8 +34,7 @@ public class BenchMarkInferenceDistributedHDFS2048 {
     public static JavaSparkContext startSparkSession(){
         SparkConf conf = new SparkConf();
         conf.setAppName("DL4JInferenceDistributedHDFS");
-        //conf.setMaster("local[*]");
-        conf.setMaster("spark://192.168.137.224:7077");
+        conf.setMaster("spark://afog-master:7077");
 
         return new JavaSparkContext(conf);
     }
@@ -90,7 +91,9 @@ public class BenchMarkInferenceDistributedHDFS2048 {
     public static void main(String[] args) throws Exception {
 
 
-        int iterations = 5;
+        Logger.getLogger("org.apache.spark").setLevel(Level.ERROR);
+
+        int iterations = 50;
 
         JavaSparkContext sc = startSparkSession();
 
@@ -111,12 +114,12 @@ public class BenchMarkInferenceDistributedHDFS2048 {
 
         JavaPairRDD<String, INDArray> predictions = null;
 
-        for(int i = 0 ; i < iterations; i++){
-            predictions = makePredictions(testPairs, sparkNet);
+        //for(int i = 0 ; i < iterations; i++){
+	    predictions = makePredictions(testPairs, sparkNet);
 
-            predictions.count();
+	    predictions.count();
 
-        }
+        //}
 
         long endTime = System.nanoTime();
 

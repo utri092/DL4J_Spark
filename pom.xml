@@ -27,6 +27,7 @@
     <name>Introduction to Distributed Training with DL4J</name>
     <description>A set of examples introducing distributed training with the DL4J framework</description>
 
+
     <properties>
         <dl4j-master.version>1.0.0-beta7</dl4j-master.version>
         <!-- Change the nd4j.backend property to nd4j-cuda-X-platform to use CUDA GPUs -->

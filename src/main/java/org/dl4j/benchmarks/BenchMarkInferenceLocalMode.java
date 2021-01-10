@@ -1,5 +1,7 @@
 package org.dl4j.benchmarks;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -117,6 +119,8 @@ public class BenchMarkInferenceLocalMode {
     }
 
     public static void main(String[] args) throws Exception {
+
+        Logger.getLogger("org.apache.spark").setLevel(Level.ERROR);
 
         int iterations = 5;
 
