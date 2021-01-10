@@ -6,7 +6,7 @@
  
  See each folder and script for details.
  
- ### Compile using Maven
+ ### Compile using Maven for Non-IDE Approach
  `mvn clean compile install`
  
  ### Command Example
