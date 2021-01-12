@@ -30,27 +30,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e53c3d9-6f54-4407-a38f-0adc8146a94d" name="Default Changelist" comment="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation.&#10;&#10;Note:- Local mode works in code but not terminal. Opposite for distributed mode">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_armhf_0_3_9_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_5_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_armhf_0_3_9_1_1_5_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_linux_x86_64_1_0_0_beta7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_linux_armhf_1_0_0_beta7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_11.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_armhf_0_3_9_1_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_1_5_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_x86_64_0_3_9_1_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_openblas_linux_armhf_0_3_9_1_5_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_linux_armhf_1_0_0_beta7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_nd4j_nd4j_native_linux_x86_64_1_0_0_beta7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/deeplearning4j-example-sample.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS2048.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS4096.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceDistributedHDFS8192.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS2048.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS4096.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkInferenceLocalModeHDFS8192.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainDistributed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainDistributed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/BenchMarkTrainLocalMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/CreatePartitionsFromDataset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dl4j/benchmarks/CreatePartitionsFromDataset.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +71,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -99,9 +89,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SangSettingsDL4J/pom.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/SangSettingsDL4J/pom.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -129,7 +119,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BenchMarkInferenceLocalModeHDFS512">
+  <component name="RunManager" selected="Application.BenchMarkInferenceLocalModeHDFS2048">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -156,8 +146,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchMarkInferenceDistributedHDFS512" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceDistributedHDFS512" />
+    <configuration name="BenchMarkInferenceLocalMode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalMode" />
+      <module name="deeplearning4j-example-sample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dl4j.benchmarks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkInferenceLocalModeHDFS2048" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS2048" />
       <module name="deeplearning4j-example-sample" />
       <extension name="coverage">
         <pattern>
@@ -182,21 +185,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchMarkInferenceLocalModeHDFS8192" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS8192" />
-      <module name="deeplearning4j-example-sample" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dl4j.benchmarks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Model_Inference_with_DL4J_HDFS_v1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.Model_Inference_with_DL4J_HDFS_v1" />
+    <configuration name="BenchMarkTrainLocalMode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dl4j.benchmarks.BenchMarkTrainLocalMode" />
       <module name="deeplearning4j-example-sample" />
       <extension name="coverage">
         <pattern>
@@ -209,19 +199,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS8192" />
       <item itemvalue="Application.BenchMarkInferenceDistributedHDFS2048" />
-      <item itemvalue="Application.Model_Inference_with_DL4J_HDFS_v1" />
       <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS512" />
-      <item itemvalue="Application.BenchMarkInferenceDistributedHDFS512" />
+      <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
+      <item itemvalue="Application.BenchMarkTrainLocalMode" />
+      <item itemvalue="Application.BenchMarkInferenceLocalMode" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS512" />
-        <item itemvalue="Application.BenchMarkInferenceDistributedHDFS512" />
-        <item itemvalue="Application.Model_Inference_with_DL4J_HDFS_v1" />
+        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS2048" />
+        <item itemvalue="Application.BenchMarkInferenceLocalMode" />
+        <item itemvalue="Application.BenchMarkTrainLocalMode" />
         <item itemvalue="Application.BenchMarkInferenceDistributedHDFS2048" />
-        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS8192" />
+        <item itemvalue="Application.BenchMarkInferenceLocalModeHDFS512" />
       </list>
     </recent_temporary>
   </component>
@@ -594,32 +584,6 @@
     <MESSAGE value="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation" />
     <MESSAGE value="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation.&#10;&#10;Note:- Local mode works in code but not terminal. Opposite for distributed mode" />
     <option name="LAST_COMMIT_MESSAGE" value="Benchmarks Inference Programs updated with Spark Action and averag/total time calculation.&#10;&#10;Note:- Local mode works in code but not terminal. Opposite for distributed mode" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="518" y="241" width="426" height="484" key="FileChooserDialogImpl" timestamp="1610251518757">
-      <screen x="0" y="36" width="1280" height="988" />
-    </state>
-    <state x="518" y="241" width="426" height="484" key="FileChooserDialogImpl/0.36.1280.988@0.36.1280.988" timestamp="1610251518757" />
-    <state width="1236" height="261" key="GridCell.Tab.0.bottom" timestamp="1610252381025">
-      <screen x="0" y="36" width="1280" height="988" />
-    </state>
-    <state width="1236" height="261" key="GridCell.Tab.0.bottom/0.36.1280.988@0.36.1280.988" timestamp="1610252381025" />
-    <state width="1236" height="261" key="GridCell.Tab.0.center" timestamp="1610252381023">
-      <screen x="0" y="36" width="1280" height="988" />
-    </state>
-    <state width="1236" height="261" key="GridCell.Tab.0.center/0.36.1280.988@0.36.1280.988" timestamp="1610252381023" />
-    <state width="1236" height="261" key="GridCell.Tab.0.left" timestamp="1610252381022">
-      <screen x="0" y="36" width="1280" height="988" />
-    </state>
-    <state width="1236" height="261" key="GridCell.Tab.0.left/0.36.1280.988@0.36.1280.988" timestamp="1610252381022" />
-    <state width="1236" height="261" key="GridCell.Tab.0.right" timestamp="1610252381024">
-      <screen x="0" y="36" width="1280" height="988" />
-    </state>
-    <state width="1236" height="261" key="GridCell.Tab.0.right/0.36.1280.988@0.36.1280.988" timestamp="1610252381024" />
-    <state x="73" y="83" width="1026" height="857" key="SettingsEditor" timestamp="1610251770879">
-      <screen x="0" y="36" width="1280" height="988" />
-    </state>
-    <state x="73" y="83" width="1026" height="857" key="SettingsEditor/0.36.1280.988@0.36.1280.988" timestamp="1610251770879" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

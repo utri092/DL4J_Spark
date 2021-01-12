@@ -1,6 +1,8 @@
 <component name="libraryTable">
-  <library name="Maven: org.nd4j:nd4j-native:linux-armhf:1.0.0-beta7">
-    <CLASSES />
+  <library name="Maven: org.nd4j:nd4j-native:macosx-x86_64:1.0.0-beta7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-native/1.0.0-beta7/nd4j-native-1.0.0-beta7-macosx-x86_64.jar!/" />
+    </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-native/1.0.0-beta7/nd4j-native-1.0.0-beta7-javadoc.jar!/" />
     </JAVADOC>

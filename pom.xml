@@ -27,12 +27,11 @@
     <name>Introduction to Distributed Training with DL4J</name>
     <description>A set of examples introducing distributed training with the DL4J framework</description>
 
-
     <properties>
         <dl4j-master.version>1.0.0-beta7</dl4j-master.version>
         <!-- Change the nd4j.backend property to nd4j-cuda-X-platform to use CUDA GPUs -->
         <!-- <nd4j.backend>nd4j-cuda-10.2-platform</nd4j.backend> -->
-        <nd4j.backend>nd4j-native</nd4j.backend>
+        <nd4j.backend>nd4j-native-platform</nd4j.backend>
         <java.version>1.8</java.version>
         <shadedClassifier>bin</shadedClassifier>
         <scala.binary.version>2.11</scala.binary.version>
