@@ -9,7 +9,11 @@
  ### Compile using Maven for Non-IDE Approach
  `mvn clean compile install`
  
- ### Command Example
+  ### Local Mode Command Example
+  
+ `java -cp target/<jar-file> org.dl4j.BenchMarkInferenceLocalModeHDFS2048`
+ 
+ ### Distributed Command Example
  
  `spark-submit --class org.dl4j.benchmarks.BenchMarkInferenceDistributedHDFS8192 --master spark://afog-master:7077 --conf spark.executor.memory=2g --total-executor-cores=12 --executor-cores=4 target/deeplearning4j-example-sample-1.0.0-beta7-bin.jar`
  
