@@ -122,7 +122,7 @@ public class BenchMarkInferenceLocalMode {
 
         Logger.getLogger("org.apache.spark").setLevel(Level.ERROR);
 
-        int iterations = 5;
+        int iterations = 1;
 
         JavaSparkContext sc = startSparkSession();
 
