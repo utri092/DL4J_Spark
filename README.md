@@ -11,7 +11,7 @@
  
   ### Local Mode Command Example
   
- `java -cp target/<jar-file> org.dl4j.BenchMarkInferenceLocalModeHDFS2048`
+ `java -cp target/<jar-file> org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS2048`
  
  ### Distributed Command Example
  
