@@ -22,5 +22,6 @@
  2) Configure ram and cores according to requirements
  3) <jar-file-name>-bin.jar contains all the dependencies. Non bin/Non Uber jar files lack them and can be used to run programs in Spark Local Mode.
  4) Read [Lazy Evaluation Article 1](https://www.alibabacloud.com/forum/read-535) and [Lazy Evaluation Article 2](https://data-flair.training/blogs/spark-rdd-operations-transformations-actions/) for understanding inserting actions in time measurement.
+5) Distributed Training Code files do not work on ARM in this release. Follow issue [here](https://github.com/eclipse/deeplearning4j/issues/9110#issuecomment-756430695) for updates 
  
 
